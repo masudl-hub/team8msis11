@@ -205,18 +205,18 @@ html, body {
 /* ============ SLIDE 3 · FLYWHEEL ============ */
 .s-flywheel .body {
   position: absolute; top: 280px; left: 80px; right: 80px; bottom: 80px;
-  display: grid; grid-template-columns: 1fr 420px; column-gap: 64px;
+  display: grid; grid-template-columns: 1fr 380px; column-gap: 48px;
   align-items: center;
 }
-.s-flywheel .chart { display: flex; align-items: center; justify-content: center; }
-.s-flywheel .chart svg { width: 100%; max-width: 760px; height: auto; }
+.s-flywheel .chart { display: flex; align-items: center; justify-content: center; overflow: visible; }
+.s-flywheel .chart svg { width: 100%; max-width: 920px; height: auto; overflow: visible; }
 .s-flywheel .stats { display: flex; flex-direction: column; gap: 56px; }
 .s-flywheel .stat .num {
-  font-size: 112px; font-weight: 800;
+  font-size: 104px; font-weight: 800;
   letter-spacing: -0.05em; line-height: 0.9;
   color: var(--accent-text);
 }
-.s-flywheel .stat .num .unit { font-size: 56px; color: var(--accent-text); margin-left: 6px; }
+.s-flywheel .stat .num .unit { font-size: 52px; color: var(--accent-text); margin-left: 6px; }
 .s-flywheel .stat .cap {
   margin-top: 14px;
   font-size: 18px; line-height: 1.5; color: var(--text-secondary);
