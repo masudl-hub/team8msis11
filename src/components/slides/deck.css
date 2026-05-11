@@ -318,7 +318,7 @@ html, body {
   display: inline-flex; align-items: center; gap: 12px;
 }
 .s-license .pan .head::before {
-  content: ""; width: 10px; height: 10px;
+  content: ""; width: 12px; height: 12px; border-radius: 50%;
 }
 .s-license .pan.pro .head { color: var(--ink); }
 .s-license .pan.pro .head::before { background: var(--g-green); }
@@ -373,7 +373,7 @@ html, body {
   color: var(--ink);
 }
 .s-wedge .leg .tag::before {
-  content: ""; width: 10px; height: 10px;
+  content: ""; width: 12px; height: 12px; border-radius: 50%;
 }
 .s-wedge .leg.now .tag::before { background: var(--g-green); }
 .s-wedge .leg.next .tag::before { background: var(--g-blue); }
@@ -467,46 +467,51 @@ html, body {
 
 /* ============ SLIDE 9 · RISK LEDGER ============ */
 .s-risk .body {
-  position: absolute; top: 320px; left: 80px; right: 80px; bottom: 80px;
+  position: absolute; top: 360px; left: 80px; right: 80px; bottom: 80px;
 }
-.s-risk .grid {
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr 280px;
-  column-gap: 48px;
+.s-risk .risk-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.s-risk .card {
   border-top: 1px solid var(--ink);
+  padding-top: 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  min-height: 360px;
 }
-.s-risk .gh {
-  padding: 20px 0 16px;
+.s-risk .card .bullet {
+  width: 20px; height: 20px; border-radius: 50%;
+  display: inline-block;
+}
+.s-risk .card .name {
+  font-size: 42px; font-weight: 700;
+  letter-spacing: -0.025em; color: var(--ink); line-height: 1;
+}
+.s-risk .card .mit {
+  font-size: 18px; color: var(--ink-2); line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+.s-risk .card .tag {
+  margin-top: auto;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase;
   color: var(--mute); font-weight: 700;
-  border-bottom: 1px solid var(--rule);
-}
-.s-risk .row {
-  padding: 24px 0; border-bottom: 1px solid var(--rule);
-  font-size: 18px; line-height: 1.5;
-}
-.s-risk .row.risk { color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
-.s-risk .row.mit { color: var(--ink-2); }
-.s-risk .row.gate { color: var(--mute); }
-.s-risk .row.threshold {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px; letter-spacing: 0.16em;
-  color: var(--ink); font-weight: 700;
+  padding-top: 16px; border-top: 1px solid var(--rule);
 }
 .s-risk .kill {
-  margin-top: 48px;
-  display: grid; grid-template-columns: 200px 1fr; column-gap: 48px;
-  padding: 32px 0 0;
+  margin-top: 56px;
+  display: grid; grid-template-columns: 240px 1fr; column-gap: 48px;
+  padding: 28px 0 0;
   border-top: 2px solid var(--g-red);
+  align-items: baseline;
 }
 .s-risk .kill .tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 13px; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--g-red); font-weight: 700;
 }
 .s-risk .kill .body-text {
-  font-size: 20px; color: var(--ink); line-height: 1.5; letter-spacing: -0.01em;
+  font-size: 22px; color: var(--ink); line-height: 1.45; letter-spacing: -0.01em;
 }
 
 /* ============ SLIDE 10 · SYNTHESIS ============ */
