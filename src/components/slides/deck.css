@@ -398,45 +398,46 @@ html, body {
   max-width: 540px; letter-spacing: -0.015em;
 }
 
-/* ============ SLIDE 9 · RISK LEDGER ============ */
+/* ============ SLIDE 9 · RISK CARDS ============ */
 .s-risk .body {
-  position: absolute; top: 320px; left: 80px; right: 80px; bottom: 80px;
+  position: absolute; top: 360px; left: 80px; right: 80px; bottom: 80px;
+  display: flex; flex-direction: column; justify-content: space-between;
 }
-.s-risk .grid {
-  display: grid;
-  grid-template-columns: 200px 1fr 1fr 280px;
-  column-gap: 48px;
+.s-risk .cards {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+}
+.s-risk .card {
   border-top: 1px solid var(--ink);
+  padding: 32px 0 24px;
+  display: flex; flex-direction: column; gap: 18px;
+  min-height: 320px;
 }
-.s-risk .gh {
-  padding: 20px 0 16px;
+.s-risk .card .chip {
+  width: 16px; height: 16px; border-radius: 50%; display: inline-block;
+}
+.s-risk .card .r {
+  font-size: 44px; font-weight: 600; color: var(--ink);
+  letter-spacing: -0.025em; line-height: 1;
+}
+.s-risk .card .note {
+  font-size: 17px; color: var(--mute); line-height: 1.4;
+  letter-spacing: -0.005em;
+}
+.s-risk .card .t {
+  margin-top: auto;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
-  color: var(--mute); font-weight: 700;
-  border-bottom: 1px solid var(--rule);
-}
-.s-risk .row {
-  padding: 24px 0; border-bottom: 1px solid var(--rule);
-  font-size: 18px; line-height: 1.5;
-}
-.s-risk .row.risk { color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
-.s-risk .row.mit { color: var(--ink-2); }
-.s-risk .row.gate { color: var(--mute); }
-.s-risk .row.threshold {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 13px; letter-spacing: 0.16em;
+  font-size: 13px; letter-spacing: 0.24em; text-transform: uppercase;
   color: var(--ink); font-weight: 700;
+  padding-top: 18px; border-top: 1px solid var(--rule);
 }
 .s-risk .kill {
-  margin-top: 48px;
-  display: grid; grid-template-columns: 200px 1fr; column-gap: 48px;
-  padding: 32px 0 0;
-  border-top: 2px solid var(--g-red);
+  display: flex; align-items: baseline; gap: 24px;
+  padding-top: 28px; border-top: 2px solid var(--g-red);
 }
 .s-risk .kill .tag {
   font-family: 'JetBrains Mono', monospace;
   font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
-  color: var(--g-red); font-weight: 700;
+  color: var(--g-red); font-weight: 700; white-space: nowrap;
 }
 .s-risk .kill .body-text {
   font-size: 20px; color: var(--ink); line-height: 1.5; letter-spacing: -0.01em;
