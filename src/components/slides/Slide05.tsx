@@ -18,9 +18,10 @@ export function Slide05() {
             <div className="small">OAA showed 40+ partners willing to adopt Google software in dashboards.</div>
           </div>
           <div className="fulcrum">
-            <div className="axis" />
-            <div className="verdict">Useful as a hedge.<br/>Weak as the primary strategy.</div>
-            <div className="axis" style={{ transform: "rotate(180deg)" }} />
+            <div className="verdict">
+              Useful as a hedge.
+              <strong>Weak as the primary strategy.</strong>
+            </div>
           </div>
           <div className="pan con">
             <div className="head">Cost</div>

@@ -3,6 +3,7 @@ export const slideClass = "s-title";
 export function Slide01() {
   return (
     <>
+      <div className="bar"><span /><span /><span /><span /></div>
       <div className="meta">MSIS 511 · Team 8 · Final Case · End of 2014</div>
       <h1 className="hero">
         Operate the<br />
