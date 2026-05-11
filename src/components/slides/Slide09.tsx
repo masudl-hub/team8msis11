@@ -1,40 +1,36 @@
-import { Header, Watermark } from "./_chrome";
+import { Header } from "./_chrome";
 
 export const slideClass = "s-risk";
 
+const RISKS = [
+  { name: "Capability", mit: "Weather-simple, pre-mapped geofences", tag: "Disengagement ↓", color: "var(--g-blue)" },
+  { name: "Liability", mit: "Safety board + reinsurance partner", tag: "Incident review", color: "var(--g-red)" },
+  { name: "Privacy", mit: "Aggregate → Maps · rider data opt-in", tag: "100% audited", color: "var(--g-yellow)" },
+  { name: "Economics", mit: "No expansion without modeled cost / mile", tag: "Gate per city", color: "var(--g-green)" },
+];
+
 export function Slide09() {
-  const rows = [
-    { r: "Capability", m: "Weather-simple, pre-mapped geofences; pause if disengagements rise", g: "Disengagement rate", t: "TREND ↓" },
-    { r: "Liability", m: "Safety board, incident protocol, insurance + reinsurance partner", g: "Incident review", t: "PASS / FAIL" },
-    { r: "Privacy", m: "Environmental data → Maps; rider trip data segregated, opt-in only", g: "Audit coverage", t: "100% AUDITED" },
-    { r: "Economics", m: "No paid expansion until modeled cost / revenue-mile clears threshold", g: "Unit economics", t: "GATE PER CITY" },
-  ];
   return (
     <>
-      <Watermark />
       <Header
         num="08 · Risks & mitigations"
         title={<>The recommendation works only if these are <em>actively managed</em>.</>}
       />
       <div className="body">
-        <div className="grid">
-          <div className="gh">Risk</div>
-          <div className="gh">Mitigation</div>
-          <div className="gh">Gate</div>
-          <div className="gh">Threshold</div>
-          {rows.map((row) => (
-            <div key={row.r} style={{ display: "contents" }}>
-              <div className="row risk">{row.r}</div>
-              <div className="row mit">{row.m}</div>
-              <div className="row gate">{row.g}</div>
-              <div className="row threshold">{row.t}</div>
+        <div className="risk-grid">
+          {RISKS.map((r) => (
+            <div key={r.name} className="card">
+              <span className="bullet" style={{ background: r.color }} />
+              <div className="name">{r.name}</div>
+              <div className="mit">{r.mit}</div>
+              <div className="tag">{r.tag}</div>
             </div>
           ))}
         </div>
         <div className="kill">
           <div className="tag">Kill criterion</div>
           <div className="body-text">
-            If Level 4 capability or city-level economics do not clear gates within defined milestones, slow expansion and shift emphasis to restricted environments or selective licensing.
+            If capability or city-level economics miss the gates, slow expansion and shift weight to licensing.
           </div>
         </div>
       </div>
