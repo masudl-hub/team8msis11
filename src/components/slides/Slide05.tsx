@@ -8,41 +8,20 @@ export function Slide05() {
       <Watermark />
       <Header
         num="04 · Position licensing"
-        title={<>Licensing gives <em>scale</em> — but loosens Google's grip on the customer.</>}
+        title={<>A useful <em>hedge</em> — not the strategy.</>}
       />
       <div className="body">
-        <div className="balance">
+        <div className="scale">
           <div className="pan pro">
-            <div className="head">Upside</div>
-            <div className="big">Asset-light reach</div>
-            <div className="small">OAA showed 40+ partners willing to adopt Google software in dashboards.</div>
-          </div>
-          <div className="fulcrum">
-            <div className="verdict">
-              Useful as a hedge.
-              <strong>Weak as the primary strategy.</strong>
-            </div>
+            <div className="head">Reach</div>
+            <div className="big">Asset-light</div>
           </div>
           <div className="pan con">
             <div className="head">Cost</div>
-            <div className="big">No operating loop</div>
-            <div className="small">Maps, brain, rider interface, fleet data — control flows to whoever owns the vehicle.</div>
+            <div className="big">No loop</div>
           </div>
         </div>
-        <div className="signals">
-          <div className="signal">
-            <div className="who">Mercedes + Nokia HERE</div>
-            <div className="what">OEMs are buying maps elsewhere to avoid Google dependency.</div>
-          </div>
-          <div className="signal">
-            <div className="who">Mobileye</div>
-            <div className="what">Already embedded with GM, BMW, Volvo — cheaper, partner-friendly, neutral.</div>
-          </div>
-          <div className="signal">
-            <div className="who">Nissan · OAA</div>
-            <div className="what">Selective partnership appetite exists where Google does not control the vehicle.</div>
-          </div>
-        </div>
+        <div className="verdict">Keep licensing in non-competing use cases. Operate everywhere else.</div>
       </div>
     </>
   );
