@@ -306,7 +306,7 @@ html, body {
   color: var(--ink);
 }
 .s-wedge .leg .tag::before {
-  content: ""; width: 10px; height: 10px;
+  content: ""; width: 12px; height: 12px; border-radius: 50%;
 }
 .s-wedge .leg.now .tag::before { background: var(--g-green); }
 .s-wedge .leg.next .tag::before { background: var(--g-blue); }
@@ -523,7 +523,7 @@ html, body {
   border-bottom: 1px solid var(--ink);
   display: inline-flex; align-items: center; gap: 12px;
 }
-.s-bk .split .pane .head::before { content: ""; width: 10px; height: 10px; }
+.s-bk .split .pane .head::before { content: ""; width: 12px; height: 12px; border-radius: 50%; }
 .s-bk .split .pane.flow .head { color: var(--ink); }
 .s-bk .split .pane.flow .head::before { background: var(--g-blue); }
 .s-bk .split .pane.hold .head { color: var(--ink); }
