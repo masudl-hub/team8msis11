@@ -4,7 +4,6 @@ export function Slide01() {
   return (
     <>
       <div className="bar"><span /><span /><span /><span /></div>
-      <div className="meta">MSIS 511 · Team 8 · Final Case · End of 2014</div>
       <h1 className="hero">
         Operate the<br />
         <span className="accent">Network.</span><br />
@@ -20,7 +19,7 @@ export function Slide01() {
       </div>
 
       <div className="footer">
-        <div className="team">Team 8 · Five presenters · 12 minutes</div>
+        <div className="team">Norah · Surbhi · Fardeen · Ashish · Masud</div>
         <div className="hint">Press F for fullscreen · ← → to navigate</div>
       </div>
     </>
