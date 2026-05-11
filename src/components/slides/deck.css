@@ -529,7 +529,7 @@ html, body {
   position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
   text-align: center; width: 380px;
 }
-.s-synth .triangle .center .ring {
+.s-synth .triangle .center .tag {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--g-blue); margin-bottom: 14px; font-weight: 700;

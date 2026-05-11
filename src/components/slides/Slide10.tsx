@@ -39,7 +39,7 @@ export function Slide10() {
           <div className="v">Separated subsidiary</div>
         </div>
         <div className="center">
-          <div className="ring">Operate · License · Gate</div>
+          <div className="tag">Operate · License · Gate</div>
           <div className="verdict">Mobility as an information network.</div>
         </div>
       </div>
