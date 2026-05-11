@@ -205,18 +205,18 @@ html, body {
 /* ============ SLIDE 3 · FLYWHEEL ============ */
 .s-flywheel .body {
   position: absolute; top: 280px; left: 80px; right: 80px; bottom: 80px;
-  display: grid; grid-template-columns: 1fr 420px; column-gap: 64px;
+  display: grid; grid-template-columns: 1fr 380px; column-gap: 48px;
   align-items: center;
 }
-.s-flywheel .chart { display: flex; align-items: center; justify-content: center; }
-.s-flywheel .chart svg { width: 100%; max-width: 760px; height: auto; }
+.s-flywheel .chart { display: flex; align-items: center; justify-content: center; overflow: visible; }
+.s-flywheel .chart svg { width: 100%; max-width: 920px; height: auto; overflow: visible; }
 .s-flywheel .stats { display: flex; flex-direction: column; gap: 56px; }
 .s-flywheel .stat .num {
-  font-size: 112px; font-weight: 800;
+  font-size: 104px; font-weight: 800;
   letter-spacing: -0.05em; line-height: 0.9;
   color: var(--accent-text);
 }
-.s-flywheel .stat .num .unit { font-size: 56px; color: var(--accent-text); margin-left: 6px; }
+.s-flywheel .stat .num .unit { font-size: 52px; color: var(--accent-text); margin-left: 6px; }
 .s-flywheel .stat .cap {
   margin-top: 14px;
   font-size: 18px; line-height: 1.5; color: var(--text-secondary);
@@ -493,10 +493,19 @@ html, body {
   font-size: 14px; letter-spacing: 0.4em; text-transform: uppercase;
   color: var(--text-tertiary); margin-bottom: 40px;
 }
-.s-synth .triangle { position: relative; width: 900px; height: 540px; margin-bottom: 64px; }
+.s-synth .triangle { position: relative; width: 1000px; height: 560px; margin-bottom: 56px; }
 .s-synth .triangle svg { width: 100%; height: 100%; display: block; }
 .s-synth .triangle .vertex {
-  position: absolute; text-align: center; transform: translate(-50%,-50%);
+  position: absolute; text-align: center;
+}
+.s-synth .triangle .vertex.top {
+  left: 50%; top: 8px; transform: translateX(-50%);
+}
+.s-synth .triangle .vertex.right {
+  right: 0; top: 480px; text-align: right;
+}
+.s-synth .triangle .vertex.left {
+  left: 0; top: 480px; text-align: left;
 }
 .s-synth .triangle .vertex .lbl {
   font-family: 'JetBrains Mono', monospace;
@@ -504,10 +513,11 @@ html, body {
   color: var(--text-tertiary); margin-bottom: 6px;
 }
 .s-synth .triangle .vertex .v {
-  font-size: 30px; font-weight: 700; color: var(--white); letter-spacing: -0.015em;
+  font-size: 26px; font-weight: 700; color: var(--white); letter-spacing: -0.015em;
+  white-space: nowrap;
 }
 .s-synth .triangle .center {
-  position: absolute; top: 56%; left: 50%; transform: translate(-50%,-50%);
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
   text-align: center; width: 360px;
 }
 .s-synth .triangle .center .ring {
@@ -516,8 +526,8 @@ html, body {
   color: var(--accent-text); margin-bottom: 10px;
 }
 .s-synth .triangle .center .verdict {
-  font-size: 34px; font-weight: 800; color: var(--white);
-  letter-spacing: -0.02em; line-height: 1.1;
+  font-size: 30px; font-weight: 800; color: var(--white);
+  letter-spacing: -0.02em; line-height: 1.15;
 }
 .s-synth .closer {
   font-family: Georgia, serif; font-style: italic;
