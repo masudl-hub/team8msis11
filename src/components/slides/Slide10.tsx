@@ -1,24 +1,19 @@
 export const slideClass = "s-synth";
 
 function TriangleSvg() {
-  // Triangle vertices in viewBox space, matching the .vertex % positions below.
   const top = { x: 500, y: 90 };
   const right = { x: 880, y: 470 };
   const left = { x: 120, y: 470 };
   const points = `${top.x},${top.y} ${right.x},${right.y} ${left.x},${left.y}`;
+  const colors = ["#1A73E8", "#EA4335", "#F9AB00"];
+  const verts = [top, right, left];
   return (
     <svg viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="tri-g" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#4F8CFF" stopOpacity="0.32" />
-          <stop offset="100%" stopColor="#4F8CFF" stopOpacity="0.04" />
-        </linearGradient>
-      </defs>
-      <polygon points={points} fill="url(#tri-g)" stroke="rgba(139,180,255,0.55)" strokeWidth="1.4" />
-      {[top, right, left].map((p, i) => (
+      <polygon points={points} fill="#F2F1ED" stroke="#111111" strokeWidth="1.4" />
+      {verts.map((p, i) => (
         <g key={i}>
-          <circle cx={p.x} cy={p.y} r="14" fill="#0B0D10" stroke="#8BB4FF" strokeWidth="2" />
-          <circle cx={p.x} cy={p.y} r="4" fill="#8BB4FF" />
+          <circle cx={p.x} cy={p.y} r="13" fill="#FAFAF7" stroke={colors[i]} strokeWidth="3" />
+          <circle cx={p.x} cy={p.y} r="5" fill={colors[i]} />
         </g>
       ))}
     </svg>

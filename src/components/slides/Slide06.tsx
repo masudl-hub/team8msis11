@@ -3,60 +3,45 @@ import { Header, Watermark } from "./_chrome";
 export const slideClass = "s-wedge";
 
 function WedgeSvg() {
-  // Line: (60, 300) → (1440, 60). slope = (60-300)/(1440-60) = -0.17391
   const x0 = 60, y0 = 300, x1 = 1440, y1 = 60;
   const slope = (y1 - y0) / (x1 - x0);
   const yOn = (x: number) => y0 + slope * (x - x0);
   const phases = [
-    { x: 240, label: "NOW",   color: "#5BC98E", big: true },
-    { x: 760, label: "NEXT",  color: "#4F8CFF", big: false },
-    { x: 1260, label: "LATER", color: "#8BB4FF", big: false },
+    { x: 240,  label: "NOW",   color: "#34A853", big: true },
+    { x: 760,  label: "NEXT",  color: "#1A73E8", big: false },
+    { x: 1260, label: "LATER", color: "#F9AB00", big: false },
   ];
 
   return (
     <svg viewBox="0 0 1500 360" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <linearGradient id="wedge-g" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#5BC98E" stopOpacity="0.55" />
-          <stop offset="55%" stopColor="#4F8CFF" stopOpacity="0.45" />
-          <stop offset="100%" stopColor="#4F8CFF" stopOpacity="0.05" />
-        </linearGradient>
-      </defs>
-
-      {/* wedge fill */}
-      <polygon points={`${x0},${y0} ${x1},${y1} ${x1},${y0} ${x0},${y0}`} fill="url(#wedge-g)" />
+      {/* wedge fill — paper-toned, subtle */}
+      <polygon points={`${x0},${y0} ${x1},${y1} ${x1},${y0}`} fill="#F2F1ED" />
       {/* hypotenuse */}
-      <line x1={x0} y1={y0} x2={x1} y2={y1} stroke="#8BB4FF" strokeWidth="1.5" />
+      <line x1={x0} y1={y0} x2={x1} y2={y1} stroke="#111111" strokeWidth="1.4" />
       {/* baseline */}
-      <line x1={x0} y1={y0} x2={x1} y2={y0} stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
+      <line x1={x0} y1={y0} x2={x1} y2={y0} stroke="#E4E2DC" strokeWidth="1" />
 
-      {/* phase markers — dots sit exactly on the hypotenuse */}
       {phases.map((p) => {
         const yLine = yOn(p.x);
         return (
           <g key={p.label}>
-            <line x1={p.x} y1={yLine} x2={p.x} y2={y0} stroke="rgba(255,255,255,0.18)" strokeDasharray="2 6" />
-            <circle cx={p.x} cy={yLine} r={p.big ? 13 : 8} fill={p.color} stroke="#0B0D10" strokeWidth="3" />
-            <text
-              x={p.x}
-              y={yLine - 22}
-              textAnchor="middle"
-              fill={p.color}
-              fontSize="11"
-              letterSpacing="3"
-              fontFamily="ui-monospace, monospace"
-              fontWeight="700"
-            >
+            <line x1={p.x} y1={yLine} x2={p.x} y2={y0} stroke="#B9B7B0" strokeDasharray="2 5" />
+            <circle cx={p.x} cy={yLine} r={p.big ? 12 : 8} fill={p.color} stroke="#FAFAF7" strokeWidth="3" />
+            <text x={p.x} y={yLine - 22} textAnchor="middle" fill="#111111"
+              fontSize="11" letterSpacing="3"
+              fontFamily="ui-monospace, monospace" fontWeight="700">
               {p.label}
             </text>
           </g>
         );
       })}
 
-      {/* axes */}
-      <text x={x0} y={y0 + 28} fill="rgba(255,255,255,0.42)" fontSize="12" letterSpacing="3" fontFamily="ui-monospace, monospace">START</text>
-      <text x={x1} y={y0 + 28} textAnchor="end" fill="rgba(255,255,255,0.42)" fontSize="12" letterSpacing="3" fontFamily="ui-monospace, monospace">SCALE</text>
-      <text x={x0} y={42} fill="rgba(255,255,255,0.42)" fontSize="12" letterSpacing="3" fontFamily="ui-monospace, monospace">MARKET BREADTH ↑</text>
+      <text x={x0} y={y0 + 26} fill="#6B6B6B" fontSize="11" letterSpacing="3"
+        fontFamily="ui-monospace, monospace" fontWeight="700">START</text>
+      <text x={x1} y={y0 + 26} textAnchor="end" fill="#6B6B6B" fontSize="11" letterSpacing="3"
+        fontFamily="ui-monospace, monospace" fontWeight="700">SCALE</text>
+      <text x={x0} y={42} fill="#6B6B6B" fontSize="11" letterSpacing="3"
+        fontFamily="ui-monospace, monospace" fontWeight="700">MARKET BREADTH ↑</text>
     </svg>
   );
 }
