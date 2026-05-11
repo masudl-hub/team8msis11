@@ -1,5 +1,5 @@
 export function Watermark() {
-  return null;
+  return <div className="watermark">MSIS 511 · TEAM 8 · END OF 2014</div>;
 }
 
 export function Header({ num, title, sub }: { num: string; title: React.ReactNode; sub?: string }) {
