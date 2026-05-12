@@ -40,7 +40,13 @@ const MAIN_DECK_LENGTH = 10;
 
 export function Deck() {
   const total = SLIDES.length;
-  const [current, setCurrent] = useState(0);
+  const initial = (() => {
+    if (typeof window === "undefined") return 0;
+    const p = new URLSearchParams(window.location.search).get("slide");
+    const n = p ? parseInt(p, 10) - 1 : 0;
+    return Number.isFinite(n) && n >= 0 && n < SLIDES.length ? n : 0;
+  })();
+  const [current, setCurrent] = useState(initial);
   const stageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
