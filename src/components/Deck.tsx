@@ -50,6 +50,14 @@ export function Deck() {
   const stageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const p = new URLSearchParams(window.location.search).get("slide");
+    if (p) {
+      const n = parseInt(p, 10) - 1;
+      if (Number.isFinite(n) && n >= 0 && n < SLIDES.length) setCurrent(n);
+    }
+  }, []);
+
+  useEffect(() => {
     const fit = () => {
       const stage = stageRef.current;
       if (!stage) return;
