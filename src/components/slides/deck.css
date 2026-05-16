@@ -661,6 +661,17 @@ html, body {
   font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
   color: var(--mute-2);
 }
+.s-landscape .spectrum {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  padding: 12px 0;
+}
+.s-landscape .spectrum svg { width: 100%; height: auto; max-height: 540px; display: block; }
+.s-landscape .legend-note {
+  font-size: 18px; color: var(--mute); line-height: 1.5;
+  padding-top: 18px; border-top: 1px solid var(--rule);
+  max-width: 720px;
+}
+.s-landscape .legend-note strong { color: var(--ink); font-weight: 700; }
 .s-landscape .players { display: flex; flex-direction: column; flex: 1; }
 .s-landscape .player {
   display: grid; grid-template-columns: 1fr 160px;
