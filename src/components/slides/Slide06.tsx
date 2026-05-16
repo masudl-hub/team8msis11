@@ -51,8 +51,8 @@ export function Slide06() {
     <>
       <Watermark />
       <Header
-        num="05 · The recommended model"
-        title={<>Operate <em>rides</em> to own the learning loop.</>}
+        num="04 · §A · Who we serve"
+        title={<>Start where there is <em>no incumbent</em>. Expand on proof.</>}
       />
       <div className="body">
         <div className="wedge-chart"><WedgeSvg /></div>
@@ -74,7 +74,7 @@ export function Slide06() {
           </div>
         </div>
         <div className="gate">
-          Launch only after a modeled cost per revenue-mile beats threshold across utilization, safety-driver, remote-operator, insurance, and maintenance.
+          OEM licensing (OAA-style) is retained as a <strong>hedge</strong>, not the primary game — Google keeps the operating loop and the data.
         </div>
       </div>
     </>

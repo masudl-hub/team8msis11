@@ -6,7 +6,7 @@ export function Slide04() {
   return (
     <>
       <Header
-        num="03 · Eliminate consumer car sales"
+        num="03 · §A · Reject consumer car sales"
         title={<>Selling cars puts Google in the <em>wrong game</em>.</>}
       />
       <div className="body">

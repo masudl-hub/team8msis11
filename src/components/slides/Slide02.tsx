@@ -14,8 +14,8 @@ export function Slide02() {
   return (
     <>
       <Header
-        num="01 · The strategic question"
-        title={<>This case is about <em>information</em>, not just cars.</>}
+        num="02 · Three decisions"
+        title={<>The whole recommendation reduces to <em>three picks</em>.</>}
       />
       <div className="body">
         <div className="matrix">
