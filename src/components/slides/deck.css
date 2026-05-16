@@ -143,16 +143,16 @@ html, body {
   color: var(--mute); margin-bottom: 80px;
 }
 .s-title .hero {
-  font-size: 188px; font-weight: 600;
-  letter-spacing: -0.055em; line-height: 0.92;
-  margin-bottom: 40px; color: var(--ink);
-  max-width: 1500px;
+  font-size: 168px; font-weight: 600;
+  letter-spacing: -0.05em; line-height: 0.94;
+  margin-bottom: 48px; color: var(--ink);
+  max-width: 1600px;
 }
 .s-title .hero .accent { color: var(--g-blue); font-weight: 700; }
 .s-title .hero .dim { color: var(--mute-2); font-weight: 400; }
 .s-title .tagline {
-  font-size: 26px; color: var(--mute); font-weight: 400;
-  margin-bottom: 96px; max-width: 1000px; line-height: 1.4;
+  font-size: 28px; color: var(--mute); font-weight: 400;
+  max-width: 1000px; line-height: 1.4;
 }
 .s-title .options { display: flex; gap: 0; margin-bottom: 80px; border-top: 1px solid var(--ink); border-bottom: 1px solid var(--rule); }
 .s-title .opt {

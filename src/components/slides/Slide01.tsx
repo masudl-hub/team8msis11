@@ -4,19 +4,19 @@ export function Slide01() {
   return (
     <>
       <div className="bar"><span /><span /><span /><span /></div>
-      <h1 className="hero">
-        Operate the<br />
-        <span className="accent">Network.</span><br />
-        <span className="dim">Don't sell the car.</span>
-      </h1>
-      <p className="tagline">A recommendation to Sundar Pichai on Google's autonomous vehicle program.</p>
 
-      <div className="options">
-        <span className="opt rejected">Discontinue</span>
-        <span className="opt rejected">Build Cars</span>
-        <span className="opt hedge">License · hedge</span>
-        <span className="opt chosen">Operate Service</span>
-      </div>
+      <div className="meta">Recommendation · Self-Driving Cars · MSIS 511</div>
+
+      <h1 className="hero">
+        A <span className="accent">Google-operated</span><br />
+        <span>autonomous</span><br />
+        <span className="dim">ride service.</span>
+      </h1>
+
+      <p className="tagline">
+        Our recommendation to Sundar Pichai on what to do with the
+        self-driving car program.
+      </p>
 
       <div className="footer">
         <div className="team">
