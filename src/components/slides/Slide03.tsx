@@ -8,15 +8,26 @@ const SUPPORTING = [
   { k: "#1", u: "app", note: "Google Maps was the most-used mobile app in 2013 — the data substrate." },
 ];
 
-// x = position on Car-centric ↔ Network-centric axis (0–100)
-// labelSide alternates so labels don't collide
-const PLAYERS: { name: string; x: number; side: "top" | "bot"; us?: boolean }[] = [
-  { name: "Audi · BMW · Mercedes", x: 6, side: "top" },
-  { name: "GM · Volvo", x: 16, side: "bot" },
-  { name: "Tesla", x: 26, side: "top" },
-  { name: "Mobileye", x: 48, side: "bot" },
-  { name: "Uber", x: 78, side: "top" },
-  { name: "Google", x: 95, side: "bot", us: true },
+const LANES: { key: string; title: string; sub: string; players: string[]; us?: boolean }[] = [
+  {
+    key: "car",
+    title: "Sell the car",
+    sub: "Vehicle-centric · driver-assist or owned autonomy",
+    players: ["Audi · BMW · Mercedes", "GM · Volvo", "Tesla"],
+  },
+  {
+    key: "comp",
+    title: "Supply the parts",
+    sub: "Neutral component to OEMs",
+    players: ["Mobileye"],
+  },
+  {
+    key: "net",
+    title: "Operate the service",
+    sub: "Network-centric · rides, not cars",
+    players: ["Uber", "Google"],
+    us: true,
+  },
 ];
 
 export function Slide03() {
