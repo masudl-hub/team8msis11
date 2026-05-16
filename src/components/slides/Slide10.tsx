@@ -23,7 +23,7 @@ function TriangleSvg() {
 export function Slide10() {
   return (
     <>
-      <div className="lead">09 · The final answer</div>
+      <div className="lead">09 · Synthesis</div>
       <div className="triangle">
         <TriangleSvg />
         <div className="vertex top">

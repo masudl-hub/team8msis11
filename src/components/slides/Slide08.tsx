@@ -54,7 +54,7 @@ export function Slide08() {
     <>
       <Watermark />
       <Header
-        num="07 · Organizational structure"
+        num="05 · §B · Where the bet lives"
         title={<>The bet fails if it's <em>governed like search ads</em>.</>}
       />
       <div className="body">
@@ -63,6 +63,14 @@ export function Slide08() {
           <div className="stat">84.5<span className="pct">%</span></div>
           <div className="cap">of Google's $59.8B 2013 revenue came from advertising. A mobility bet evaluated on ad-product metrics will not survive a soft quarter.</div>
           <div className="src">Case · Exhibit 4a</div>
+          <div className="org-risks">
+            <div className="lbl">What independence protects against</div>
+            <ul>
+              <li>Resource-allocation pressure during ad-revenue dips</li>
+              <li>Wrong-metric contamination (CTR ≠ disengagement rate)</li>
+              <li>Talent retention against AV-pure competitors</li>
+            </ul>
+          </div>
           <div className="pull">
             Independence is the safest structure for preserving the bet through resource-allocation pressure.
           </div>
