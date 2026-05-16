@@ -686,6 +686,13 @@ html, body {
 .s-landscape .player .lane.car { color: var(--g-red); border-color: var(--g-red); }
 .s-landscape .player .lane.component { color: var(--g-yellow); border-color: var(--g-yellow); }
 .s-landscape .player .lane.network { color: var(--g-blue); border-color: var(--g-blue); }
+.s-landscape .player.us {
+  background: var(--ink); margin: 0 -16px; padding: 18px 16px;
+  border-bottom-color: var(--ink);
+}
+.s-landscape .player.us .who { color: var(--paper); }
+.s-landscape .player.us .post { color: var(--mute-2); }
+.s-landscape .player.us .lane { color: var(--paper); border-color: var(--paper); background: transparent; }
 
 /* ============ UNIT ECONOMICS (new S5) ============ */
 .s-econ .body {
