@@ -624,19 +624,36 @@ html, body {
   color: var(--mute); font-weight: 700; margin-bottom: 28px;
   padding-bottom: 14px; border-bottom: 1px solid var(--ink);
 }
-.s-landscape .asset-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 36px 40px;
-  flex: 1; align-content: start;
+.s-landscape .hero-stat { margin-bottom: 36px; }
+.s-landscape .hero-stat .num {
+  font-size: 188px; font-weight: 600; letter-spacing: -0.055em;
+  line-height: 0.88; color: var(--ink);
 }
-.s-landscape .asset .num {
-  font-size: 64px; font-weight: 600; letter-spacing: -0.04em;
-  line-height: 0.95; color: var(--ink);
+.s-landscape .hero-stat .num .unit {
+  font-size: 56px; color: var(--mute); margin-left: 10px; font-weight: 400;
 }
-.s-landscape .asset .num .unit {
-  font-size: 26px; color: var(--mute); margin-left: 4px; font-weight: 400;
+.s-landscape .hero-stat .cap {
+  margin-top: 18px; font-size: 20px; color: var(--ink-2); line-height: 1.5;
+  max-width: 620px;
 }
-.s-landscape .asset .note {
-  margin-top: 12px; font-size: 15px; color: var(--ink-2); line-height: 1.5;
+.s-landscape .hero-stat .cap strong { color: var(--ink); font-weight: 700; }
+.s-landscape .support {
+  display: flex; flex-direction: column;
+  border-top: 1px solid var(--rule);
+}
+.s-landscape .support .line {
+  display: grid; grid-template-columns: 140px 1fr;
+  gap: 20px; align-items: baseline;
+  padding: 16px 0; border-bottom: 1px solid var(--rule);
+}
+.s-landscape .support .k {
+  font-size: 28px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink);
+}
+.s-landscape .support .k .u {
+  font-size: 15px; color: var(--mute); font-weight: 400; margin-left: 2px;
+}
+.s-landscape .support .n {
+  font-size: 15px; color: var(--ink-2); line-height: 1.45;
 }
 .s-landscape .src {
   margin-top: 24px;
