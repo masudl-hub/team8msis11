@@ -17,18 +17,21 @@ import * as SB from "./slides/SlideB";
 import * as SC from "./slides/SlideC";
 import * as SD from "./slides/SlideD";
 import * as SE from "./slides/SlideE";
+import * as SClose from "./slides/SlideClose";
 
 const SLIDES: { kind: string; Comp: () => React.ReactElement }[] = [
-  { kind: S01.slideClass, Comp: S01.Slide01 },
-  { kind: S02.slideClass, Comp: S02.Slide02 },
-  { kind: S03.slideClass, Comp: S03.Slide03 },
-  { kind: S04.slideClass, Comp: S04.Slide04 },
-  { kind: S05.slideClass, Comp: S05.Slide05 },
-  { kind: S06.slideClass, Comp: S06.Slide06 },
-  { kind: S07.slideClass, Comp: S07.Slide07 },
-  { kind: S08.slideClass, Comp: S08.Slide08 },
-  { kind: S09.slideClass, Comp: S09.Slide09 },
-  { kind: S10.slideClass, Comp: S10.Slide10 },
+  { kind: S01.slideClass, Comp: S01.Slide01 },        // 1 · Title
+  { kind: S03.slideClass, Comp: S03.Slide03 },        // 2 · Landscape
+  { kind: S02.slideClass, Comp: S02.Slide02 },        // 3 · Three decisions
+  { kind: S04.slideClass, Comp: S04.Slide04 },        // 4 · §A Reject car sales
+  { kind: S06.slideClass, Comp: S06.Slide06 },        // 5 · §A Who we serve
+  { kind: S08.slideClass, Comp: S08.Slide08 },        // 6 · §B Org structure
+  { kind: S07.slideClass, Comp: S07.Slide07 },        // 7 · §C Gated deployment
+  { kind: S05.slideClass, Comp: S05.Slide05 },        // 8 · §C Unit economics
+  { kind: S09.slideClass, Comp: S09.Slide09 },        // 9 · Risks & kill criterion
+  { kind: S10.slideClass, Comp: S10.Slide10 },        // 10 · Synthesis
+  { kind: SClose.slideClass, Comp: SClose.SlideClose }, // 11 · Q&A
+  // Backups
   { kind: SA.slideClass, Comp: SA.SlideA },
   { kind: SB.slideClass, Comp: SB.SlideB },
   { kind: SC.slideClass, Comp: SC.SlideC },
@@ -36,7 +39,7 @@ const SLIDES: { kind: string; Comp: () => React.ReactElement }[] = [
   { kind: SE.slideClass, Comp: SE.SlideE },
 ];
 
-const MAIN_DECK_LENGTH = 10;
+const MAIN_DECK_LENGTH = 11;
 
 export function Deck() {
   const total = SLIDES.length;

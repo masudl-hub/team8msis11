@@ -603,3 +603,197 @@ html, body {
   list-style: none; padding: 16px 0; border-bottom: 1px solid var(--rule);
   font-size: 18px; color: var(--ink-2); line-height: 1.45;
 }
+
+/* ============ S1 footer: course line ============ */
+.s-title .footer .team .course {
+  margin-top: 8px;
+  color: var(--mute);
+  font-size: 11px;
+}
+
+/* ============ LANDSCAPE (new S2) ============ */
+.s-landscape .body {
+  position: absolute; top: 320px; left: 80px; right: 80px; bottom: 80px;
+  display: grid; grid-template-columns: 1fr 1px 1fr; column-gap: 64px;
+}
+.s-landscape .pane { display: flex; flex-direction: column; }
+.s-landscape .rule { background: var(--rule); width: 1px; height: 100%; }
+.s-landscape .label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--mute); font-weight: 700; margin-bottom: 28px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--ink);
+}
+.s-landscape .asset-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 36px 40px;
+  flex: 1; align-content: start;
+}
+.s-landscape .asset .num {
+  font-size: 64px; font-weight: 600; letter-spacing: -0.04em;
+  line-height: 0.95; color: var(--ink);
+}
+.s-landscape .asset .num .unit {
+  font-size: 26px; color: var(--mute); margin-left: 4px; font-weight: 400;
+}
+.s-landscape .asset .note {
+  margin-top: 12px; font-size: 15px; color: var(--ink-2); line-height: 1.5;
+}
+.s-landscape .src {
+  margin-top: 24px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--mute-2);
+}
+.s-landscape .players { display: flex; flex-direction: column; flex: 1; }
+.s-landscape .player {
+  display: grid; grid-template-columns: 1fr 160px;
+  align-items: baseline;
+  padding: 18px 0; border-bottom: 1px solid var(--rule);
+  gap: 16px;
+}
+.s-landscape .player .who {
+  font-size: 19px; font-weight: 600; color: var(--ink); letter-spacing: -0.01em;
+}
+.s-landscape .player .post {
+  font-size: 14px; color: var(--mute); line-height: 1.4;
+  grid-column: 1; margin-top: 4px;
+}
+.s-landscape .player .lane {
+  grid-row: 1 / span 2; grid-column: 2;
+  justify-self: end; align-self: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--mute); font-weight: 700;
+  padding: 6px 10px; border: 1px solid var(--rule); border-radius: 999px;
+}
+.s-landscape .player .lane.car { color: var(--g-red); border-color: var(--g-red); }
+.s-landscape .player .lane.component { color: var(--g-yellow); border-color: var(--g-yellow); }
+.s-landscape .player .lane.network { color: var(--g-blue); border-color: var(--g-blue); }
+
+/* ============ UNIT ECONOMICS (new S5) ============ */
+.s-econ .body {
+  position: absolute; top: 320px; left: 80px; right: 80px; bottom: 80px;
+  display: flex; flex-direction: column;
+}
+.s-econ .formula {
+  display: grid; grid-template-columns: 1fr 80px 1fr; align-items: center;
+  padding: 32px 0 40px; border-bottom: 1px solid var(--ink);
+}
+.s-econ .formula .lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--mute); margin-bottom: 18px; font-weight: 700;
+}
+.s-econ .formula .expr {
+  display: inline-flex; flex-direction: column; align-items: center;
+  font-size: 56px; font-weight: 600; letter-spacing: -0.025em; color: var(--ink);
+}
+.s-econ .formula .expr .den { padding-bottom: 6px; }
+.s-econ .formula .expr .bar { width: 280px; height: 2px; background: var(--ink); }
+.s-econ .formula .expr .num { padding-top: 6px; }
+.s-econ .formula .op {
+  font-size: 64px; font-weight: 400; color: var(--g-blue); text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+}
+.s-econ .formula .rhs { text-align: right; }
+.s-econ .formula .rhs .expr-note {
+  font-size: 18px; color: var(--ink-2); line-height: 1.5;
+  max-width: 480px; margin-left: auto;
+}
+.s-econ .vars {
+  flex: 1; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 48px; padding-top: 40px;
+}
+.s-econ .vars .col .head {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ink); font-weight: 700; margin-bottom: 18px;
+  padding-bottom: 14px; border-bottom: 1px solid var(--rule);
+  display: inline-flex; align-items: center; gap: 12px;
+}
+.s-econ .vars .col:nth-child(1) .head::before {
+  content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--g-red);
+}
+.s-econ .vars .col:nth-child(2) .head::before {
+  content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--g-green);
+}
+.s-econ .vars .col:nth-child(3) .head::before {
+  content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--g-yellow);
+}
+.s-econ .vars ul { list-style: none; }
+.s-econ .vars li {
+  padding: 12px 0; border-bottom: 1px solid var(--rule);
+  font-size: 16px; color: var(--ink-2); line-height: 1.4;
+}
+.s-econ .rule-line {
+  height: 2px; background: var(--g-blue); margin-top: 24px;
+}
+.s-econ .rule-text {
+  padding-top: 18px;
+  font-size: 18px; color: var(--mute); line-height: 1.5; text-align: center;
+}
+.s-econ .rule-text strong { color: var(--ink); font-weight: 700; }
+
+/* ============ ORG · risks block ============ */
+.s-org .side .org-risks {
+  margin: 28px 0 32px;
+  padding-top: 18px; border-top: 1px solid var(--rule);
+}
+.s-org .side .org-risks .lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--mute); font-weight: 700; margin-bottom: 14px;
+}
+.s-org .side .org-risks ul { list-style: none; }
+.s-org .side .org-risks li {
+  position: relative; padding: 10px 0 10px 22px;
+  font-size: 16px; color: var(--ink-2); line-height: 1.45;
+  border-bottom: 1px solid var(--rule);
+}
+.s-org .side .org-risks li::before {
+  content: ""; position: absolute; left: 0; top: 18px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--g-red);
+}
+
+/* ============ CLOSE (S11) ============ */
+.s-close { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 0 120px; }
+.s-close::before { display: none; }
+.s-close .bar {
+  position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.s-close .bar > span:nth-child(1) { background: var(--g-blue); }
+.s-close .bar > span:nth-child(2) { background: var(--g-red); }
+.s-close .bar > span:nth-child(3) { background: var(--g-yellow); }
+.s-close .bar > span:nth-child(4) { background: var(--g-green); }
+.s-close .lead {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px; letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--mute); margin-bottom: 64px;
+}
+.s-close .big {
+  font-size: 240px; font-weight: 600;
+  letter-spacing: -0.06em; line-height: 0.9; color: var(--ink);
+  margin-bottom: 40px;
+}
+.s-close .big .dot { color: var(--g-blue); }
+.s-close .tagline {
+  font-size: 24px; color: var(--mute);
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.16em; text-transform: uppercase;
+}
+.s-close .footer {
+  position: absolute; bottom: 80px; left: 120px; right: 120px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  border-top: 1px solid var(--rule); padding-top: 24px;
+}
+.s-close .footer .team {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--ink);
+}
+.s-close .footer .course {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase;
+  color: var(--mute);
+}
