@@ -8,13 +8,15 @@ const SUPPORTING = [
   { k: "#1", u: "app", note: "Google Maps was the most-used mobile app in 2013 — the data substrate." },
 ];
 
-const PLAYERS = [
-  { name: "Audi · BMW · Mercedes", posture: "Sustaining L2/L3 driver-assist features", lane: "Car-centric" },
-  { name: "GM · Volvo", posture: "Partnered with Mobileye for perception", lane: "Car-centric" },
-  { name: "Tesla", posture: "High-end consumer autonomy in owned cars", lane: "Car-centric" },
-  { name: "Mobileye", posture: "Neutral perception supplier to OEMs", lane: "Component" },
-  { name: "Uber", posture: "Ride-hail demand layer + AV ambition", lane: "Network-centric" },
-  { name: "Google", posture: "L4 stack + Maps + Uber stake — no car", lane: "Network-centric", us: true },
+// x = position on Car-centric ↔ Network-centric axis (0–100)
+// labelSide alternates so labels don't collide
+const PLAYERS: { name: string; x: number; side: "top" | "bot"; us?: boolean }[] = [
+  { name: "Audi · BMW · Mercedes", x: 6, side: "top" },
+  { name: "GM · Volvo", x: 16, side: "bot" },
+  { name: "Tesla", x: 26, side: "top" },
+  { name: "Mobileye", x: 48, side: "bot" },
+  { name: "Uber", x: 78, side: "top" },
+  { name: "Google", x: 95, side: "bot", us: true },
 ];
 
 export function Slide03() {
