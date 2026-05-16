@@ -14,8 +14,8 @@ export function Slide07() {
     <>
       <Watermark />
       <Header
-        num="06 · Deployment must be gated"
-        title={<>From Level 3 testing to Level 4 service — <em>through gates</em>, not on a press calendar.</>}
+        num="06 · §C · Gated deployment"
+        title={<>From L3 testing to L4 service — <em>through gates</em>, not on a press calendar.</>}
       />
       <div className="body">
         <div className="timeline">

@@ -19,7 +19,10 @@ export function Slide01() {
       </div>
 
       <div className="footer">
-        <div className="team">Norah · Surbhi · Fardeen · Ashish · Masud</div>
+        <div className="team">
+          <div>Norah · Surbhi · Fardeen · Ashish · Masud</div>
+          <div className="course">MSIS 511 · Group [#]</div>
+        </div>
         <div className="hint">Press F for fullscreen · ← → to navigate</div>
       </div>
     </>

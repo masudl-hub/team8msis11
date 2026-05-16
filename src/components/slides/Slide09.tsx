@@ -13,7 +13,7 @@ export function Slide09() {
   return (
     <>
       <Header
-        num="08 · Risks & mitigations"
+        num="08 · Risks & kill criterion"
         title={<>The recommendation works only if these are <em>actively managed</em>.</>}
       />
       <div className="body">
