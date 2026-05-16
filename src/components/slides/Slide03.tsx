@@ -60,70 +60,24 @@ export function Slide03() {
         <div className="rule" />
         <div className="pane field">
           <div className="label">The field · who else is in the race</div>
-          <div className="spectrum">
-            <svg viewBox="0 0 800 560" preserveAspectRatio="xMidYMid meet">
-              {/* axis */}
-              <line x1="60" y1="280" x2="740" y2="280" stroke="#111" strokeWidth="1.5" />
-              {/* tick marks at ends */}
-              <line x1="60" y1="270" x2="60" y2="290" stroke="#111" strokeWidth="1.5" />
-              <line x1="740" y1="270" x2="740" y2="290" stroke="#111" strokeWidth="1.5" />
-              {/* axis pole labels */}
-              <text x="60" y="320" fontFamily="JetBrains Mono, monospace"
-                    fontSize="13" letterSpacing="3" fill="#6B6B6B" fontWeight="700">
-                CAR-CENTRIC
-              </text>
-              <text x="740" y="320" textAnchor="end" fontFamily="JetBrains Mono, monospace"
-                    fontSize="13" letterSpacing="3" fill="#1A73E8" fontWeight="700">
-                NETWORK-CENTRIC
-              </text>
-              <text x="60" y="340" fontFamily="JetBrains Mono, monospace"
-                    fontSize="11" letterSpacing="2" fill="#9A9A98">
-                SELL THE CAR
-              </text>
-              <text x="740" y="340" textAnchor="end" fontFamily="JetBrains Mono, monospace"
-                    fontSize="11" letterSpacing="2" fill="#9A9A98">
-                OPERATE THE SERVICE
-              </text>
-
-              {PLAYERS.map((p) => {
-                const cx = 60 + (p.x / 100) * 680;
-                const isTop = p.side === "top";
-                const labelY = isTop ? 120 : 460;
-                const connY = isTop ? 268 : 292;
-                const connEndY = isTop ? 145 : 435;
-                const r = p.us ? 11 : 6;
-                const fill = p.us ? "#111" : "#2A2A2A";
-                return (
-                  <g key={p.name}>
-                    <line x1={cx} y1={connY} x2={cx} y2={connEndY}
-                          stroke={p.us ? "#111" : "#C9C8C3"} strokeWidth={p.us ? 1.5 : 1} />
-                    {p.us && (
-                      <circle cx={cx} cy={280} r={20} fill="none"
-                              stroke="#1A73E8" strokeWidth="1.5" strokeDasharray="3 3" />
-                    )}
-                    <circle cx={cx} cy={280} r={r} fill={fill} />
-                    <text x={cx} y={labelY} textAnchor="middle"
-                          fontFamily="Inter, sans-serif"
-                          fontSize={p.us ? 26 : 18}
-                          fontWeight={p.us ? 700 : 600}
-                          fill={p.us ? "#111" : "#2A2A2A"}
-                          letterSpacing="-0.01em">
-                      {p.name}
-                    </text>
-                    {p.us && (
-                      <text x={cx} y={labelY + 30} textAnchor="middle"
-                            fontFamily="JetBrains Mono, monospace"
-                            fontSize="11" letterSpacing="3" fill="#1A73E8" fontWeight="700">
-                        OUR LANE
-                      </text>
-                    )}
-                  </g>
-                );
-              })}
-            </svg>
+          <div className="lanes">
+            {LANES.map((lane) => (
+              <div key={lane.key} className={`lane-col ${lane.us ? "us" : ""}`}>
+                <div className="lane-head">
+                  <div className="lane-key">{lane.key.toUpperCase()}</div>
+                  <div className="lane-title">{lane.title}</div>
+                  <div className="lane-sub">{lane.sub}</div>
+                </div>
+                <ul className="lane-players">
+                  {lane.players.map((p) => (
+                    <li key={p} className={p === "Google" ? "google" : ""}>{p}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
           <div className="legend-note">
-            Everyone else is building a better car. <strong>Google's assets point the other way.</strong>
+            Five players sell cars. <strong>Google is one of two betting on the network</strong> — and the only one with the full stack.
           </div>
           <div className="src">Case · pp. 4–9</div>
         </div>
