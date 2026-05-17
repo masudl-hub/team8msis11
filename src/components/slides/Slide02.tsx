@@ -5,25 +5,25 @@ export const slideClass = "s-u";
 export function Slide02() {
   return (
     <>
-      <Eyebrow>02 · FRAMING</Eyebrow>
-      <Title>The question has changed.</Title>
-      <Sub>The 2014 prompt is closed. A different decision faces Pichai in 2026.</Sub>
+      <Eyebrow>02 · THE QUESTION</Eyebrow>
+      <Title>What the case asks. What we answer.</Title>
+      <Sub>The prompt is broad. Our answer is one sentence.</Sub>
       <div className="u-body">
         <div className="two-col">
           <div className="col left">
-            <div className="tag">2014</div>
-            <h3>The case question</h3>
+            <div className="tag">THE CASE PROMPT</div>
+            <h3>Advise Pichai on AV strategy.</h3>
             <div className="rule" />
-            <p>Should Google enter autonomous vehicles? What business model? How to compete with established automakers?</p>
-            <div className="note">Decision under technical uncertainty.</div>
+            <p>Consider the original motivation, how Google can monetize, what competitors are doing, and Google's strategic positioning — with explicit attention to mission fit.</p>
+            <div className="note">A broad strategic question.</div>
           </div>
           <div className="divider" />
           <div className="col right">
-            <div className="tag">2026</div>
-            <h3>The question we are answering</h3>
+            <div className="tag">OUR ANSWER</div>
+            <h3>Operator-first. Layered licensing. Integrated.</h3>
             <div className="rule" />
-            <p>Waymo has won the proof. 500K rides/week. $126B valuation. How does Alphabet convert leadership into durable economic value before rivals close the gap?</p>
-            <div className="note">Decision under commercial validation.</div>
+            <p>Operate first-party robotaxi as the economic engine, layer a non-competing licensing track, and integrate tightly with the rest of Google's platforms.</p>
+            <div className="note">One sentence. Three components.</div>
           </div>
         </div>
       </div>

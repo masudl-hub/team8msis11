@@ -1,30 +1,28 @@
-import { Eyebrow, Title, Footer } from "./_u";
+import { Eyebrow, Title, Sub, Footer } from "./_u";
 
 export const slideClass = "s-u";
 
-const OPTS = [
-  { k: "A", nm: "Harvest", play: "Slow investment, milk leadership.", verdict: "REJECT · Abandons the flywheel.", win: false },
-  { k: "B", nm: "License primary", play: "Mobileye-style stack sales to OEMs.", verdict: "REJECT · Surrenders the rider relationship.", win: false },
-  { k: "C", nm: "Operate (current path)", play: "Continue first-party robotaxi only.", verdict: "ACCEPTABLE · Single-product risk.", win: false },
-  { k: "D", nm: "Operate + separate + layer", play: "First-party rides, IPO Waymo, license non-competing verticals.", verdict: "RECOMMEND · Defends moat, opens optionality.", win: true },
+const M = [
+  { n: "01", t: "Physical-world data ingestion", d: "AV miles feed Maps and Search Local — the loop the 2014 case named as Google's most valuable potential asset." },
+  { n: "02", t: "Universal accessibility", d: "Mobility-as-a-service for the elderly, disabled, and unlicensed — the literal clause of Google's mission applied to mobility." },
+  { n: "03", t: "Physical-AI proof point", d: "170M autonomous miles makes Google's AI thesis credible vs OpenAI, Anthropic, and Meta — who cannot say the same." },
 ];
 
 export function Slide10() {
   return (
     <>
-      <Eyebrow>10 · OPTIONS</Eyebrow>
-      <Title>Four paths. One recommended.</Title>
-      <div className="u-body no-sub">
-        <div className="opts">
-          {OPTS.map((o) => (
-            <div key={o.k} className={`opt-card ${o.win ? "win" : ""}`}>
-              <div className="k">{o.k}</div>
-              <div className="nm">{o.nm}</div>
-              <div className="mini" />
-              <div className="lbl">PLAY</div>
-              <div className="play">{o.play}</div>
-              <div className={`lbl v ${o.win ? "win" : ""}`}>VERDICT</div>
-              <div className="verdict">{o.verdict}</div>
+      <Eyebrow>10 · MISSION FIT</Eyebrow>
+      <Title>Three mechanisms. All operational in 2026.</Title>
+      <Sub>"Organize the world's information and make it universally accessible and useful."</Sub>
+      <div className="u-body">
+        <div className="mech-list">
+          {M.map((m) => (
+            <div key={m.n} className="mech">
+              <div className="mn">{m.n}</div>
+              <div className="mb">
+                <div className="mt">{m.t}</div>
+                <div className="md">{m.d}</div>
+              </div>
             </div>
           ))}
         </div>

@@ -1181,3 +1181,114 @@ html, body {
 }
 .s-u.closing .c-credits .names { font-size: 22px; color: var(--ink); margin-bottom: 8px; }
 .s-u.closing .c-credits .meta { font-size: 16px; color: var(--mute); }
+
+/* ============ 2026 v2 · Pichai-advisory deck ============ */
+
+/* Slide 3 · 2014 motivations — 5 stacked bullets */
+.s-u .moti-list { border-top: 1.5px solid var(--ink); }
+.s-u .moti-list .row {
+  display: grid; grid-template-columns: 80px 360px 1fr; gap: 28px;
+  align-items: center; padding: 30px 0; border-bottom: 1px solid var(--rule);
+}
+.s-u .moti-list .row .n {
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--g-blue);
+}
+.s-u .moti-list .row .t { font-size: 30px; font-weight: 700; letter-spacing: -0.015em; }
+.s-u .moti-list .row .d { font-size: 20px; color: var(--mute); line-height: 1.4; }
+.s-u .moti-foot {
+  margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--rule);
+  font-size: 20px; color: var(--ink); font-style: italic; line-height: 1.45;
+}
+.s-u .moti-foot strong { color: var(--g-blue); font-style: normal; font-weight: 700; }
+
+/* Slide 5 · Why operator wins — 2x3 grid */
+.s-u .reasons {
+  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr;
+  gap: 28px; height: 100%;
+}
+.s-u .reason {
+  border-top: 2px solid var(--g-blue); padding: 22px 4px 0;
+  display: flex; flex-direction: column;
+}
+.s-u .reason .n {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px;
+  letter-spacing: 0.3em; color: var(--mute); font-weight: 700; margin-bottom: 18px;
+}
+.s-u .reason .t {
+  font-size: 32px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; color: var(--ink);
+}
+
+/* Slide 8 · 6-tile portfolio */
+.s-u .portfolio {
+  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr;
+  gap: 24px; height: calc(100% - 130px);
+}
+.s-u .p-tile {
+  border: 1.5px solid var(--rule); padding: 30px 28px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.s-u .p-tile.av { border-color: var(--g-blue); border-width: 2.5px; background: var(--paper-2); }
+.s-u .p-tile .ptag {
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.3em; color: var(--mute); margin-bottom: 14px;
+}
+.s-u .p-tile.av .ptag { color: var(--g-blue); }
+.s-u .p-tile .pname { font-size: 38px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 14px; }
+.s-u .p-tile .pdesc { font-size: 16px; color: var(--mute); line-height: 1.45; }
+.s-u .portfolio-cap {
+  position: absolute; bottom: 110px; left: 96px; right: 96px;
+  font-size: 19px; color: var(--ink); line-height: 1.5; font-style: italic;
+  padding-top: 18px; border-top: 1px solid var(--rule);
+}
+.s-u .portfolio-cap strong { color: var(--g-blue); font-style: normal; font-weight: 700; }
+
+/* Slide 9 · stacked recommendation (3 components) */
+.s-u.recommend .r-components {
+  position: absolute; top: 360px; left: 96px; right: 96px; bottom: 160px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.s-u.recommend .r-comp {
+  display: grid; grid-template-columns: 100px 1fr; gap: 32px; align-items: baseline;
+  padding: 28px 0; border-top: 1px solid #333;
+}
+.s-u.recommend .r-comp:last-child { border-bottom: 1px solid #333; }
+.s-u.recommend .r-comp .rn {
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
+  color: var(--g-blue); letter-spacing: 0.1em;
+}
+.s-u.recommend .r-comp .rt {
+  font-size: 48px; font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; color: #FAFAF7;
+}
+.s-u.recommend .r-comp .rt em { font-style: normal; color: var(--g-blue); font-weight: 700; }
+
+/* Slide 10 · Mission mechanisms (3 rows, like .rows but headline-led) */
+.s-u .mech-list { border-top: 1.5px solid var(--ink); }
+.s-u .mech {
+  display: grid; grid-template-columns: 100px 1fr; gap: 32px;
+  align-items: baseline; padding: 40px 0; border-bottom: 1px solid var(--rule);
+}
+.s-u .mech .mn {
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--g-blue);
+}
+.s-u .mech .mb .mt { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
+.s-u .mech .mb .md { font-size: 20px; color: var(--mute); line-height: 1.45; }
+
+/* Slide 11 · risk + mitigation 2-col rows */
+.s-u .risk2 { border-top: 1.5px solid var(--ink); }
+.s-u .risk2 .row {
+  display: grid; grid-template-columns: 70px 1.1fr 1fr; gap: 28px;
+  align-items: baseline; padding: 26px 0; border-bottom: 1px solid var(--rule);
+}
+.s-u .risk2 .row .n {
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; color: var(--mute);
+}
+.s-u .risk2 .row .r { font-size: 22px; font-weight: 700; line-height: 1.35; color: var(--ink); }
+.s-u .risk2 .row .m { font-size: 18px; color: var(--mute); line-height: 1.45; }
+.s-u .risk2 .head {
+  display: grid; grid-template-columns: 70px 1.1fr 1fr; gap: 28px;
+  padding: 0 0 14px; border-bottom: 1px solid var(--ink);
+  font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.3em;
+  font-weight: 700; color: var(--mute); text-transform: uppercase;
+}
+.s-u .risk2 .head .mh { color: var(--g-blue); }
+

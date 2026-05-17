@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-export const FOOTER_TEXT = "MSIS 511 · TEAM 8 · GOOGLE CAR / WAYMO · MAY 18, 2026";
+export const FOOTER_TEXT = "MSIS 511 · TEAM 8 · GOOGLE CAR · MAY 18, 2026";
 
 export function Footer({ n }: { n: number }) {
   return (
