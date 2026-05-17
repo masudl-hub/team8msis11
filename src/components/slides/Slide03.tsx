@@ -1,87 +1,48 @@
-import { Header } from "./_chrome";
+import { Eyebrow, Title, Sub, Footer } from "./_u";
 
-export const slideClass = "s-landscape";
+export const slideClass = "s-u";
 
-const SUPPORTING = [
-  { k: "20", u: "cars", note: "Lexus RX450h test fleet + a new pod prototype with no steering wheel." },
-  { k: "$258M", u: "", note: "Invested in Uber via Google Ventures (2013) — a stake in the demand layer." },
-  { k: "#1", u: "app", note: "Google Maps was the most-used mobile app in 2013 — the data substrate." },
-];
-
-const LANES: { key: string; title: string; sub: string; players: string[]; us?: boolean }[] = [
-  {
-    key: "car",
-    title: "Sell the car",
-    sub: "Vehicle-centric · driver-assist or owned autonomy",
-    players: ["Audi · BMW · Mercedes", "GM · Volvo", "Tesla"],
-  },
-  {
-    key: "comp",
-    title: "Supply the parts",
-    sub: "Neutral component to OEMs",
-    players: ["Mobileye"],
-  },
-  {
-    key: "net",
-    title: "Operate the service",
-    sub: "Network-centric · rides, not cars",
-    players: ["Uber", "Google"],
-    us: true,
-  },
+const ITEMS = [
+  { y: "2015", t: "Alphabet", d: "Holding-co restructure; AV moved to Other Bets" },
+  { y: "2016", t: "Waymo", d: "Spun out of Google X as subsidiary" },
+  { y: "2018", t: "Waymo One", d: "First commercial driverless service · Phoenix" },
+  { y: "2024", t: "Apple Titan", d: "Cancelled after ~$10B, decade of work", muted: true },
+  { y: "2024", t: "Cruise", d: "GM ends robotaxi funding · $10B+ sunk", muted: true },
+  { y: "2026", t: "Waymo $126B", d: "$16B raise · largest AV round in history" },
+  { y: "2026", t: "500K / wk", d: "10 cities · 170M autonomous miles" },
 ];
 
 export function Slide03() {
   return (
     <>
-      <Header
-        num="01 · The landscape"
-        title={<>Google enters an industry it does not <em>resemble</em>.</>}
-      />
-      <div className="body">
-        <div className="pane assets">
-          <div className="label">Google's hand · 2014</div>
-          <div className="hero-stat">
-            <div className="num">700K<span className="unit">mi</span></div>
-            <div className="cap">
-              Autonomous test miles on public roads — <strong>500K incident-free</strong>.
-              No one else in the industry is close.
-            </div>
-          </div>
-          <div className="support">
-            {SUPPORTING.map((s) => (
-              <div key={s.k} className="line">
-                <div className="k">{s.k}{s.u && <span className="u"> {s.u}</span>}</div>
-                <div className="n">{s.note}</div>
-              </div>
-            ))}
-          </div>
-          <div className="src">Case · pp. 6–7, Exhibit 4a</div>
-        </div>
-        <div className="rule" />
-        <div className="pane field">
-          <div className="label">The field · who else is in the race</div>
-          <div className="lanes">
-            {LANES.map((lane) => (
-              <div key={lane.key} className={`lane-col ${lane.us ? "us" : ""}`}>
-                <div className="lane-head">
-                  <div className="lane-key">{lane.key.toUpperCase()}</div>
-                  <div className="lane-title">{lane.title}</div>
-                  <div className="lane-sub">{lane.sub}</div>
+      <Eyebrow>03 · WHAT HAPPENED</Eyebrow>
+      <Title>Twelve years of separation and shakeout.</Title>
+      <Sub>2014 → 2026: the framework predicted both the winners and the failures.</Sub>
+      <div className="u-body">
+        <div className="timeline-wrap">
+          <div className="timeline-line" />
+          {ITEMS.map((it, i) => {
+            const pct = (i / (ITEMS.length - 1)) * 100;
+            const left = `calc(${pct}% * 0.92 + 4%)`;
+            return (
+              <div key={i} className={`tl-item ${it.muted ? "muted" : ""}`} style={{ left }}>
+                <div className="above">
+                  <div className="yr">{it.y}</div>
+                  <div className="ttl">{it.t}</div>
                 </div>
-                <ul className="lane-players">
-                  {lane.players.map((p) => (
-                    <li key={p} className={p === "Google" ? "google" : ""}>{p}</li>
-                  ))}
-                </ul>
+                <div className="dot" />
+                <div className="below">
+                  <div className="desc">{it.d}</div>
+                </div>
               </div>
-            ))}
+            );
+          })}
+          <div className="tl-footnote">
+            Two failures (Apple, Cruise) match the Bower &amp; Christensen 1995 prediction: integration kills disruptive bets.
           </div>
-          <div className="legend-note">
-            Five players sell cars. <strong>Google is one of two betting on the network</strong> — and the only one with the full stack.
-          </div>
-          <div className="src">Case · pp. 4–9</div>
         </div>
       </div>
+      <Footer n={3} />
     </>
   );
 }

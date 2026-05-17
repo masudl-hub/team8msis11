@@ -1,51 +1,35 @@
-export const slideClass = "s-synth";
+import { Eyebrow, Title, Footer } from "./_u";
 
-function TriangleSvg() {
-  const top = { x: 500, y: 90 };
-  const right = { x: 880, y: 470 };
-  const left = { x: 120, y: 470 };
-  const points = `${top.x},${top.y} ${right.x},${right.y} ${left.x},${left.y}`;
-  const colors = ["#1A73E8", "#EA4335", "#F9AB00"];
-  const verts = [top, right, left];
-  return (
-    <svg viewBox="0 0 1000 560" preserveAspectRatio="xMidYMid meet">
-      <polygon points={points} fill="#F2F1ED" stroke="#111111" strokeWidth="1.4" />
-      {verts.map((p, i) => (
-        <g key={i}>
-          <circle cx={p.x} cy={p.y} r="13" fill="#FAFAF7" stroke={colors[i]} strokeWidth="3" />
-          <circle cx={p.x} cy={p.y} r="5" fill={colors[i]} />
-        </g>
-      ))}
-    </svg>
-  );
-}
+export const slideClass = "s-u";
+
+const OPTS = [
+  { k: "A", nm: "Harvest", play: "Slow investment, milk leadership.", verdict: "REJECT · Abandons the flywheel.", win: false },
+  { k: "B", nm: "License primary", play: "Mobileye-style stack sales to OEMs.", verdict: "REJECT · Surrenders the rider relationship.", win: false },
+  { k: "C", nm: "Operate (current path)", play: "Continue first-party robotaxi only.", verdict: "ACCEPTABLE · Single-product risk.", win: false },
+  { k: "D", nm: "Operate + separate + layer", play: "First-party rides, IPO Waymo, license non-competing verticals.", verdict: "RECOMMEND · Defends moat, opens optionality.", win: true },
+];
 
 export function Slide10() {
   return (
     <>
-      <div className="lead">09 · Synthesis</div>
-      <div className="triangle">
-        <TriangleSvg />
-        <div className="vertex top">
-          <div className="lbl">Mission fit</div>
-          <div className="v">Universally useful</div>
-        </div>
-        <div className="vertex right">
-          <div className="lbl">Data flywheel</div>
-          <div className="v">Physical-world Maps</div>
-        </div>
-        <div className="vertex left">
-          <div className="lbl">Org structure</div>
-          <div className="v">Separated subsidiary</div>
-        </div>
-        <div className="center">
-          <div className="tag">Operate · License · Gate</div>
-          <div className="verdict">Mobility as an information network.</div>
+      <Eyebrow>10 · OPTIONS</Eyebrow>
+      <Title>Four paths. One recommended.</Title>
+      <div className="u-body no-sub">
+        <div className="opts">
+          {OPTS.map((o) => (
+            <div key={o.k} className={`opt-card ${o.win ? "win" : ""}`}>
+              <div className="k">{o.k}</div>
+              <div className="nm">{o.nm}</div>
+              <div className="mini" />
+              <div className="lbl">PLAY</div>
+              <div className="play">{o.play}</div>
+              <div className={`lbl v ${o.win ? "win" : ""}`}>VERDICT</div>
+              <div className="verdict">{o.verdict}</div>
+            </div>
+          ))}
         </div>
       </div>
-      <p className="closer">
-        <strong>Continue. Operate. Separate. Gate. License selectively.</strong> Fund the AV subsidiary, launch constrained pilots, reject consumer car sales, keep OEM licensing as a hedge.
-      </p>
+      <Footer n={10} />
     </>
   );
 }
