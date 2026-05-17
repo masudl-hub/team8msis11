@@ -944,6 +944,10 @@ html, body {
 }
 .s-u.title-slide .t-credits .names { font-size: 24px; color: var(--ink); margin-bottom: 10px; }
 .s-u.title-slide .t-credits .date { font-size: 16px; color: var(--mute); }
+.s-u.title-slide .waymo-logo {
+  position: absolute; top: 36px; right: 80px;
+  z-index: 2;
+}
 
 /* ---------- Two-column (Slide 2) ---------- */
 .s-u .two-col { display: grid; grid-template-columns: 1fr 1px 1fr; gap: 64px; height: 100%; }
