@@ -1,39 +1,33 @@
-import { Header } from "./_chrome";
+import { Eyebrow, Title, Sub, Footer } from "./_u";
 
-export const slideClass = "s-frame";
-
-type Row = { q: string; opts: { label: string; pick?: boolean }[] };
-
-const ROWS: Row[] = [
-  { q: "What does Google sell?", opts: [{ label: "Cars" }, { label: "Software only" }, { label: "Rides", pick: true }] },
-  { q: "Where does the bet live?", opts: [{ label: "Inside Google" }, { label: "Separated subsidiary", pick: true }] },
-  { q: "How does it reach the road?", opts: [{ label: "National L4" }, { label: "Gated geofences", pick: true }] },
-];
+export const slideClass = "s-u";
 
 export function Slide02() {
   return (
     <>
-      <Header
-        num="02 · The recommendation"
-        title={<>Three picks define the <em>whole strategy</em>.</>}
-      />
-      <div className="body">
-        <div className="matrix">
-          {ROWS.map((row) => (
-            <div key={row.q} className="row">
-              <div className="q">{row.q}</div>
-              <div className="opts">
-                {row.opts.map((o) => (
-                  <div key={o.label} className={`opt ${o.pick ? "pick" : "skip"}`}>
-                    <span className="dot" />
-                    <span className="lbl">{o.label}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+      <Eyebrow>02 · FRAMING</Eyebrow>
+      <Title>The question has changed.</Title>
+      <Sub>The 2014 prompt is closed. A different decision faces Pichai in 2026.</Sub>
+      <div className="u-body">
+        <div className="two-col">
+          <div className="col left">
+            <div className="tag">2014</div>
+            <h3>The case question</h3>
+            <div className="rule" />
+            <p>Should Google enter autonomous vehicles? What business model? How to compete with established automakers?</p>
+            <div className="note">Decision under technical uncertainty.</div>
+          </div>
+          <div className="divider" />
+          <div className="col right">
+            <div className="tag">2026</div>
+            <h3>The question we are answering</h3>
+            <div className="rule" />
+            <p>Waymo has won the proof. 500K rides/week. $126B valuation. How does Alphabet convert leadership into durable economic value before rivals close the gap?</p>
+            <div className="note">Decision under commercial validation.</div>
+          </div>
         </div>
       </div>
+      <Footer n={2} />
     </>
   );
 }

@@ -1,39 +1,32 @@
-import { Header } from "./_chrome";
+import { Eyebrow, Title, Sub, Footer } from "./_u";
 
-export const slideClass = "s-risk";
+export const slideClass = "s-u";
 
-const RISKS = [
-  { name: "Capability", mit: "Weather-simple, pre-mapped geofences", tag: "Disengagement ↓", color: "var(--g-blue)" },
-  { name: "Liability", mit: "Safety board + reinsurance partner", tag: "Incident review", color: "var(--g-red)" },
-  { name: "Privacy", mit: "Aggregate → Maps · rider data opt-in", tag: "100% audited", color: "var(--g-yellow)" },
-  { name: "Economics", mit: "No expansion without modeled cost / mile", tag: "Gate per city", color: "var(--g-green)" },
+const BOXES = [
+  { n: "01", t: "Growth shape", d: "How fast and where to expand geographically and into adjacent products." },
+  { n: "02", t: "Structural relationship", d: "Continued subsidiary, IPO, or full separation from Alphabet." },
+  { n: "03", t: "Moat strategy", d: "How to defend the data and mapping lead as autonomy commoditizes." },
 ];
 
 export function Slide09() {
   return (
     <>
-      <Header
-        num="08 · Risks & kill criterion"
-        title={<>The recommendation works only if these are <em>actively managed</em>.</>}
-      />
-      <div className="body">
-        <div className="risk-grid">
-          {RISKS.map((r) => (
-            <div key={r.name} className="card">
-              <span className="bullet" style={{ background: r.color }} />
-              <div className="name">{r.name}</div>
-              <div className="mit">{r.mit}</div>
-              <div className="tag">{r.tag}</div>
+      <Eyebrow>09 · THE 2026 QUESTION</Eyebrow>
+      <Title>Pichai faces three real decisions.</Title>
+      <Sub>Not whether to play — but how to convert leadership into a moat.</Sub>
+      <div className="u-body">
+        <div className="boxes">
+          {BOXES.map((b) => (
+            <div key={b.n} className="box">
+              <div className="num">{b.n}</div>
+              <h3>{b.t}</h3>
+              <div className="rule" />
+              <p>{b.d}</p>
             </div>
           ))}
         </div>
-        <div className="kill">
-          <div className="tag">Kill criterion</div>
-          <div className="body-text">
-            If capability or city-level economics miss the gates, slow expansion and shift weight to licensing.
-          </div>
-        </div>
       </div>
+      <Footer n={9} />
     </>
   );
 }
