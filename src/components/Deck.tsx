@@ -14,10 +14,6 @@ import * as S09 from "./slides/Slide09";
 import * as S10 from "./slides/Slide10";
 import * as S11 from "./slides/Slide11";
 import * as S12 from "./slides/Slide12";
-import * as S13 from "./slides/Slide13";
-import * as S14 from "./slides/Slide14";
-import * as S15 from "./slides/Slide15";
-import * as S16 from "./slides/Slide16";
 
 const SLIDES: { kind: string; Comp: () => React.ReactElement }[] = [
   { kind: S01.slideClass, Comp: S01.Slide01 },
@@ -32,10 +28,6 @@ const SLIDES: { kind: string; Comp: () => React.ReactElement }[] = [
   { kind: S10.slideClass, Comp: S10.Slide10 },
   { kind: S11.slideClass, Comp: S11.Slide11 },
   { kind: S12.slideClass, Comp: S12.Slide12 },
-  { kind: S13.slideClass, Comp: S13.Slide13 },
-  { kind: S14.slideClass, Comp: S14.Slide14 },
-  { kind: S15.slideClass, Comp: S15.Slide15 },
-  { kind: S16.slideClass, Comp: S16.Slide16 },
 ];
 
 const MAIN_DECK_LENGTH = SLIDES.length;
