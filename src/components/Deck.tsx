@@ -12,34 +12,33 @@ import * as S07 from "./slides/Slide07";
 import * as S08 from "./slides/Slide08";
 import * as S09 from "./slides/Slide09";
 import * as S10 from "./slides/Slide10";
-import * as SA from "./slides/SlideA";
-import * as SB from "./slides/SlideB";
-import * as SC from "./slides/SlideC";
-import * as SD from "./slides/SlideD";
-import * as SE from "./slides/SlideE";
-import * as SClose from "./slides/SlideClose";
+import * as S11 from "./slides/Slide11";
+import * as S12 from "./slides/Slide12";
+import * as S13 from "./slides/Slide13";
+import * as S14 from "./slides/Slide14";
+import * as S15 from "./slides/Slide15";
+import * as S16 from "./slides/Slide16";
 
 const SLIDES: { kind: string; Comp: () => React.ReactElement }[] = [
-  { kind: S01.slideClass, Comp: S01.Slide01 },        // 1 · Title
-  { kind: S03.slideClass, Comp: S03.Slide03 },        // 2 · Landscape
-  { kind: S02.slideClass, Comp: S02.Slide02 },        // 3 · Three decisions
-  { kind: S04.slideClass, Comp: S04.Slide04 },        // 4 · §A Reject car sales
-  { kind: S06.slideClass, Comp: S06.Slide06 },        // 5 · §A Who we serve
-  { kind: S08.slideClass, Comp: S08.Slide08 },        // 6 · §B Org structure
-  { kind: S07.slideClass, Comp: S07.Slide07 },        // 7 · §C Gated deployment
-  { kind: S05.slideClass, Comp: S05.Slide05 },        // 8 · §C Unit economics
-  { kind: S09.slideClass, Comp: S09.Slide09 },        // 9 · Risks & kill criterion
-  { kind: S10.slideClass, Comp: S10.Slide10 },        // 10 · Synthesis
-  { kind: SClose.slideClass, Comp: SClose.SlideClose }, // 11 · Q&A
-  // Backups
-  { kind: SA.slideClass, Comp: SA.SlideA },
-  { kind: SB.slideClass, Comp: SB.SlideB },
-  { kind: SC.slideClass, Comp: SC.SlideC },
-  { kind: SD.slideClass, Comp: SD.SlideD },
-  { kind: SE.slideClass, Comp: SE.SlideE },
+  { kind: S01.slideClass, Comp: S01.Slide01 },
+  { kind: S02.slideClass, Comp: S02.Slide02 },
+  { kind: S03.slideClass, Comp: S03.Slide03 },
+  { kind: S04.slideClass, Comp: S04.Slide04 },
+  { kind: S05.slideClass, Comp: S05.Slide05 },
+  { kind: S06.slideClass, Comp: S06.Slide06 },
+  { kind: S07.slideClass, Comp: S07.Slide07 },
+  { kind: S08.slideClass, Comp: S08.Slide08 },
+  { kind: S09.slideClass, Comp: S09.Slide09 },
+  { kind: S10.slideClass, Comp: S10.Slide10 },
+  { kind: S11.slideClass, Comp: S11.Slide11 },
+  { kind: S12.slideClass, Comp: S12.Slide12 },
+  { kind: S13.slideClass, Comp: S13.Slide13 },
+  { kind: S14.slideClass, Comp: S14.Slide14 },
+  { kind: S15.slideClass, Comp: S15.Slide15 },
+  { kind: S16.slideClass, Comp: S16.Slide16 },
 ];
 
-const MAIN_DECK_LENGTH = 11;
+const MAIN_DECK_LENGTH = SLIDES.length;
 
 export function Deck() {
   const total = SLIDES.length;
@@ -100,11 +99,8 @@ export function Deck() {
     else setCurrent((c) => Math.max(c - 1, 0));
   };
 
-  const progressPct = Math.min((current + 1) / MAIN_DECK_LENGTH, 1) * 100;
-  const isBackup = current >= MAIN_DECK_LENGTH;
-  const counterText = isBackup
-    ? `BACKUP ${String.fromCharCode(65 + (current - MAIN_DECK_LENGTH))} / E`
-    : `${String(current + 1).padStart(2, "0")} / ${String(MAIN_DECK_LENGTH).padStart(2, "0")}`;
+  const progressPct = ((current + 1) / MAIN_DECK_LENGTH) * 100;
+  const counterText = `${String(current + 1).padStart(2, "0")} / ${String(MAIN_DECK_LENGTH).padStart(2, "0")}`;
 
   return (
     <div id="deck" onClick={onDeckClick}>
