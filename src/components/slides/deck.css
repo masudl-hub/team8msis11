@@ -1085,12 +1085,12 @@ html, body {
 .s-u .opt-card .verdict { font-size: 17px; line-height: 1.4; color: var(--ink); }
 .s-u .opt-card.win .verdict { color: var(--g-blue); font-weight: 700; }
 
-/* ---------- Recommendation (dark) ---------- */
-.s-u.recommend { background: var(--ink); }
+/* ---------- Recommendation (light) ---------- */
+.s-u.recommend { background: var(--paper); }
 .s-u.recommend .r-eyebrow {
   position: absolute; top: 200px; left: 96px;
   font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
-  letter-spacing: 0.4em; color: #B7DDD8; text-transform: uppercase;
+  letter-spacing: 0.4em; color: var(--g-blue); text-transform: uppercase;
 }
 .s-u.recommend .r-rule {
   position: absolute; top: 246px; left: 96px; width: 120px; height: 3px; background: var(--g-blue);
@@ -1098,16 +1098,16 @@ html, body {
 .s-u.recommend .r-text {
   position: absolute; top: 300px; left: 96px; right: 96px;
   font-size: 76px; font-weight: 700; line-height: 1.15; letter-spacing: -0.02em;
-  color: #FAFAF7;
+  color: var(--ink);
 }
-.s-u.recommend .r-text .dim { color: #888880; }
-.s-u.recommend .r-text .accent { color: #B7DDD8; }
+.s-u.recommend .r-text .dim { color: var(--mute); }
+.s-u.recommend .r-text .accent { color: var(--g-blue); }
 .s-u.recommend .r-tag {
   position: absolute; bottom: 120px; left: 96px;
   font-family: 'JetBrains Mono', monospace; font-size: 18px;
-  color: #B7DDD8; font-style: italic; letter-spacing: 0.3em;
+  color: var(--g-blue); font-style: italic; letter-spacing: 0.3em;
 }
-.s-u.recommend .u-footer { color: #6B6B6B; border-top-color: #333; }
+.s-u.recommend .u-footer { color: var(--mute); border-top-color: var(--rule); }
 
 /* ---------- Why spin (rows) ---------- */
 .s-u .rows { border-top: 1.5px solid var(--ink); }
