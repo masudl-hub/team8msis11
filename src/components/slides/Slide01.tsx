@@ -4,11 +4,6 @@ export function Slide01() {
   return (
     <>
       <div className="side-bar" />
-      <div className="waymo-logo">
-        <svg viewBox="0 0 200 40" width="200" height="40" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="32" fontFamily="'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif" fontSize="36" fontWeight="700" letterSpacing="-0.04em" fill="#111111">Waymo</text>
-        </svg>
-      </div>
       <div className="t-meta">STRATEGY RECOMMENDATION · MAY 2026</div>
       <h1 className="t-hero">
         Advising Sundar Pichai <br />on Autonomous Vehicles.

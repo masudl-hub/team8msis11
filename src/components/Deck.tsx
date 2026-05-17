@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./slides/deck.css";
+import waymoLogo from "@/assets/waymo-logo.png";
 
 import * as S01 from "./slides/Slide01";
 import * as S02 from "./slides/Slide02";
@@ -115,6 +116,7 @@ export function Deck() {
             );
           })()}
         </AnimatePresence>
+        <img src={waymoLogo} alt="Waymo" className="deck-logo" />
       </div>
       <div id="progress" style={{ width: `${progressPct}%` }} />
       <div id="counter">{counterText}</div>
