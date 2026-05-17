@@ -2,46 +2,35 @@ import { Eyebrow, Title, Sub, Footer } from "./_u";
 
 export const slideClass = "s-u";
 
-const ITEMS = [
-  { y: "2015", t: "Alphabet", d: "Holding-co restructure; AV moved to Other Bets" },
-  { y: "2016", t: "Waymo", d: "Spun out of Google X as subsidiary" },
-  { y: "2018", t: "Waymo One", d: "First commercial driverless service · Phoenix" },
-  { y: "2024", t: "Apple Titan", d: "Cancelled after ~$10B, decade of work", muted: true },
-  { y: "2024", t: "Cruise", d: "GM ends robotaxi funding · $10B+ sunk", muted: true },
-  { y: "2026", t: "Waymo $126B", d: "$16B raise · largest AV round in history" },
-  { y: "2026", t: "500K / wk", d: "10 cities · 170M autonomous miles" },
+const M = [
+  { n: "01", t: "Safety", d: "32K+ U.S. fatalities (2011); 1.2M+ globally per year." },
+  { n: "02", t: "Accessibility", d: "Mobility for the elderly, disabled, and unlicensed." },
+  { n: "03", t: "Attention liberation", d: "Riders not driving become Gmail, Maps, YouTube users." },
+  { n: "04", t: "Physical-world data", d: "Bridge the offline world to Google's online stack." },
+  { n: "05", t: "Strategic options", d: "Google X moonshot culture; no short-term revenue gate." },
 ];
 
 export function Slide03() {
   return (
     <>
-      <Eyebrow>03 · WHAT HAPPENED</Eyebrow>
-      <Title>Twelve years of separation and shakeout.</Title>
-      <Sub>2014 → 2026: the framework predicted both the winners and the failures.</Sub>
+      <Eyebrow>03 · 2014 MOTIVATION</Eyebrow>
+      <Title>Why Google invested in 2014.</Title>
+      <Sub>Five motivations, all platform-extension. None of them argue for being a car company.</Sub>
       <div className="u-body">
-        <div className="timeline-wrap">
-          <div className="timeline-line" />
-          {ITEMS.map((it, i) => {
-            const pct = (i / (ITEMS.length - 1)) * 100;
-            const left = `calc(${pct}% * 0.92 + 4%)`;
-            return (
-              <div key={i} className={`tl-item ${it.muted ? "muted" : ""}`} style={{ left }}>
-                <div className="above">
-                  <div className="yr">{it.y}</div>
-                  <div className="ttl">{it.t}</div>
-                </div>
-                <div className="dot" />
-                <div className="below">
-                  <div className="desc">{it.d}</div>
-                </div>
-              </div>
-            );
-          })}
-          <div className="tl-footnote">
-            Two failures (Apple, Cruise) match the Bower &amp; Christensen 1995 prediction: integration kills disruptive bets.
-          </div>
+        <div className="moti-list">
+          {M.map((m) => (
+            <div key={m.n} className="row">
+              <div className="n">{m.n}</div>
+              <div className="t">{m.t}</div>
+              <div className="d">{m.d}</div>
+            </div>
+          ))}
+        </div>
+        <div className="moti-foot">
+          All five are <strong>Google-platform extensions</strong>, not vehicle-business motivations. The 2026 strategy should honor that.
         </div>
       </div>
+      <div className="u-source">Source: HBS Google Car case (pp. 1, 2, 4, 6, 7)</div>
       <Footer n={3} />
     </>
   );

@@ -2,38 +2,30 @@ import { Eyebrow, Title, Sub, Footer } from "./_u";
 
 export const slideClass = "s-u";
 
-const COLS = [
-  {
-    tag: "BOWER & CHRISTENSEN · 1995",
-    title: "Organizational separation",
-    body: "Disruptive businesses fail inside integrated firms. Alphabet (2015) and Waymo (2016) executed the prescription. Cruise and Apple Titan did not — and exited.",
-  },
-  {
-    tag: "CHRISTENSEN · 2015",
-    title: "New-market disruption",
-    body: "Start with non-consumers in bounded domains. Waymo opened in geofenced Phoenix suburbs serving constrained-mobility riders — exactly the prescribed foothold.",
-  },
-  {
-    tag: "BRYNJOLFSSON & MCAFEE · 2012",
-    title: "Trajectory argument",
-    body: "AV capability would improve faster than mainstream demand required. 700K test miles in 2014 → 170M autonomous miles in 2026. The curve held.",
-  },
+const OPTS = [
+  { k: "A", nm: "Sell vehicles", play: "Build and sell Google-branded self-driving cars to consumers.", verdict: "REJECT · Google is not a car manufacturer.", win: false },
+  { k: "B", nm: "License AV stack to OEMs", play: "Sell perception, mapping, and software to automakers.", verdict: "REJECT · OEM resistance; Mobileye is the price floor.", win: false },
+  { k: "C", nm: "Operate first-party rides", play: "Google operates the service; passengers summon via Google apps.", verdict: "RECOMMEND PRIMARY · Aligned data flywheel.", win: true },
+  { k: "D", nm: "License non-competing verticals", play: "B2B platform for logistics, freight, mining, agriculture, defense.", verdict: "RECOMMEND SECONDARY · Capital-light layer on top.", win: true },
 ];
 
 export function Slide04() {
   return (
     <>
-      <Eyebrow>04 · VALIDATION</Eyebrow>
-      <Title>The 2014 framework predicted this outcome.</Title>
-      <Sub>Three readings, three predictions, three validations.</Sub>
+      <Eyebrow>04 · MONETIZATION</Eyebrow>
+      <Title>Four paths. Two recommended.</Title>
+      <Sub>Same framework filters as the 2014 brief. The 2026 evidence sharpens the verdict.</Sub>
       <div className="u-body">
-        <div className="three-col">
-          {COLS.map((c) => (
-            <div key={c.tag} className="c">
-              <div className="rule" />
-              <div className="tag">{c.tag}</div>
-              <h3>{c.title}</h3>
-              <p>{c.body}</p>
+        <div className="opts">
+          {OPTS.map((o) => (
+            <div key={o.k} className={`opt-card ${o.win ? "win" : ""}`}>
+              <div className="k">{o.k}</div>
+              <div className="nm">{o.nm}</div>
+              <div className="mini" />
+              <div className="lbl">MODEL</div>
+              <div className="play">{o.play}</div>
+              <div className={`lbl v ${o.win ? "win" : ""}`}>VERDICT</div>
+              <div className="verdict">{o.verdict}</div>
             </div>
           ))}
         </div>
