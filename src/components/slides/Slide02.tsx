@@ -7,7 +7,7 @@ export function Slide02() {
     <>
       <Eyebrow>02 · THE QUESTION</Eyebrow>
       <Title>Operator-first, layered licensing, and tight integration is Google's AV strategy.</Title>
-      <Sub>The case asks four things. This sentence answers all four.</Sub>
+      <Sub>​</Sub>
       <div className="u-body">
         <div className="two-col s02-flow">
           <div className="col left">

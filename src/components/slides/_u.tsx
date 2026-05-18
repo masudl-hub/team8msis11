@@ -20,5 +20,5 @@ export function Title({ children }: { children: ReactNode }) {
 }
 
 export function Sub({ children }: { children: ReactNode }) {
-  return <p className="u-sub">{children}</p>;
+  return <p className="u-sub my-[27px]">{children}</p>;
 }
