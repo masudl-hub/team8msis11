@@ -14,7 +14,7 @@ export function Slide04() {
   return (
     <>
       <Eyebrow>04 · MONETIZATION</Eyebrow>
-      <Title>Of four monetization paths, only two survive the filter.</Title>
+      <Title>Choose the two monetization paths that survive the strategic filter.</Title>
       <Sub>​</Sub>
       <div className="u-body">
         <div className="matrix">

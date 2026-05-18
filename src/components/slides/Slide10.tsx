@@ -12,7 +12,7 @@ export function Slide10() {
   return (
     <>
       <Eyebrow>10 · MISSION FIT</Eyebrow>
-      <Title>AV operations execute Google's mission through data, accessibility, and AI proof.</Title>
+      <Title>Anchor AV operations in Google's mission: data, accessibility, and AI proof.</Title>
       <Sub>​</Sub>
       <div className="u-body">
         <div className="pyr">
