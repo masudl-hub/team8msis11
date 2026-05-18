@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./slides/deck.css";
+import { preloadPresenterVideos } from "../lib/videoCache";
 
 import * as S01 from "./slides/Slide01";
 import * as S02 from "./slides/Slide02";
@@ -42,6 +43,10 @@ export function Deck() {
   })();
   const [current, setCurrent] = useState(initial);
   const stageRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    preloadPresenterVideos();
+  }, []);
 
   useEffect(() => {
     const p = new URLSearchParams(window.location.search).get("slide");
