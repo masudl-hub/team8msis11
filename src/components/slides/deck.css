@@ -940,7 +940,7 @@ html, body {
   font-size: 152px; font-weight: 800; letter-spacing: -0.04em; line-height: 0.96;
 }
 .s-u.title-slide .t-sub {
-  position: absolute; top: 700px; left: 144px; right: 144px;
+  position: absolute; top: 820px; left: 144px; right: 144px;
   font-size: 64px; color: var(--ink); font-weight: 500; letter-spacing: -0.01em;
 }
 .s-u.title-slide .t-rule {
