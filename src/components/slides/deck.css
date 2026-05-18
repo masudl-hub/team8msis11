@@ -962,7 +962,12 @@ html, body {
 .s-u .two-col .col p { font-size: 26px; line-height: 1.45; color: var(--ink); margin-bottom: 36px; }
 .s-u .two-col .col .note { font-size: 18px; color: var(--mute); font-style: italic; }
 .s-u .two-col .col.right .note { color: var(--g-blue); }
-.s-u .two-col .divider { background: var(--rule); }
+.s-u .two-col .divider { background: var(--rule); position: relative; }
+.s-u .two-col .divider .flow-arrow {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 88px; height: 44px; color: var(--g-blue);
+  background: var(--paper); padding: 12px 6px;
+}
 
 /* ---------- Timeline ---------- */
 .s-u .timeline-wrap { position: relative; height: 100%; }
