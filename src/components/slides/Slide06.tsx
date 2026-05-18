@@ -2,7 +2,9 @@ import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
-const STAGES = [
+type Player = { role: string; nm: string; sig: string; lead?: boolean };
+type Stage = { k: string; players: Player[] };
+const STAGES: Stage[] = [
   {
     k: "R&D",
     players: [
