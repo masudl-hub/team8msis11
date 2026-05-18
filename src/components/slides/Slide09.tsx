@@ -20,10 +20,6 @@ export function Slide09() {
         ))}
       </div>
       <div className="r-tag">OPERATE · LAYER · INTEGRATE</div>
-      <div className="u-footer">
-        <span>MSIS 511 · TEAM 8 · GOOGLE CAR · MAY 18, 2026</span>
-        <span>09</span>
-      </div>
     </>
   );
 }
