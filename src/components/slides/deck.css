@@ -1498,22 +1498,22 @@ html, body {
 }
 .s-u .fly-card.right { transform: translate(-100%, -50%); text-align: right; }
 .s-u .fly-card .fc-tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
-  letter-spacing: 0.28em; color: var(--g-blue); margin-bottom: 4px;
+  font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--g-blue); margin-bottom: 6px;
 }
-.s-u .fly-card .fc-nm { font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-.s-u .fly-card .fc-d { font-size: 13px; color: var(--mute); line-height: 1.35; }
+.s-u .fly-card .fc-nm { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+.s-u .fly-card .fc-d { font-size: 17px; color: var(--ink-2); line-height: 1.35; }
 .s-u .fly-aside {
   border-left: 2px solid var(--rule); padding-left: 28px;
 }
 .s-u .fly-aside-tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-  letter-spacing: 0.28em; color: var(--mute); margin-bottom: 18px;
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--ink-2); margin-bottom: 18px;
 }
 .s-u .fly-aside ul { list-style: none; margin: 0 0 20px; padding: 0; }
-.s-u .fly-aside li { font-size: 18px; color: var(--ink-2); line-height: 1.5; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.s-u .fly-aside li { font-size: 22px; color: var(--ink-2); line-height: 1.5; padding: 12px 0; border-bottom: 1px solid var(--rule); }
 .s-u .fly-aside li strong { color: var(--ink); font-weight: 700; }
-.s-u .fly-aside-foot { padding-top: 14px; font-size: 19px; font-weight: 700; color: var(--g-blue); line-height: 1.4; }
+.s-u .fly-aside-foot { padding-top: 14px; font-size: 24px; font-weight: 700; color: var(--g-blue); line-height: 1.4; }
 
 /* ===========================================================
    Slide 10 · Inverted pyramid (mission + 3 tiers)
