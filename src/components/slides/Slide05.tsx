@@ -54,33 +54,20 @@ export function Slide05() {
       <Title>Operator-first clears all six filters — and the 2014–2026 data proves each one.</Title>
       <Sub>​</Sub>
       <div className="u-body">
-        <div className="proof">
-          <div className="proof-rail">
-            <div className="pr-count"><span className="pr-num">6</span><span className="pr-den">/6</span></div>
-            <div className="pr-lbl">FILTERS<br/>CLEARED</div>
-            <div className="pr-ticks">
-              {R.map((_, i) => <span key={i} className="pr-tick" />)}
-            </div>
-          </div>
-          <div className="proof-grid">
-            {R.map((r, i) => (
-              <div key={r.t} className="proof-card">
-                <div className="pc-top">
-                  <span className="pc-idx">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="pc-pass">PASS</span>
-                </div>
-                <div className="pc-stat">
-                  <div className="pc-num">{r.stat}</div>
-                  <div className="pc-unit">{r.unit}</div>
-                </div>
-                <div className="pc-verdict">
-                  <div className="pc-t">{r.t}</div>
-                  <div className="pc-d">{r.d}</div>
-                </div>
+        <div className="proof-grid">
+          {R.map((r) => (
+            <div key={r.t} className="proof-card">
+              <div className="pc-stat">
+                <div className="pc-num">{r.stat}</div>
+                <div className="pc-unit">{r.unit}</div>
+              </div>
+              <div className="pc-verdict">
+                <div className="pc-t">{r.t}</div>
+                <div className="pc-d">{r.d}</div>
                 <div className="pc-src">{r.src}</div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </>
