@@ -1017,20 +1017,47 @@ html, body {
 .s-u .neg-split .col .fate { font-size: 28px; font-weight: 700; margin-bottom: 16px; }
 .s-u .neg-split .col .detail { font-size: 21px; color: var(--mute); line-height: 1.5; max-width: 580px; }
 
-/* ---------- Five tiles ---------- */
-.s-u .tiles { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; height: 100%; }
-.s-u .tile { border: 1.5px solid var(--rule); padding: 28px 22px; display: flex; flex-direction: column; }
-.s-u .tile.lead { border-color: var(--g-blue); border-width: 2.5px; }
-.s-u .tile .tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
-  letter-spacing: 0.3em; color: var(--mute); margin-bottom: 16px;
+/* ---------- Landscape (Slide 06) ---------- */
+.s-u .landscape { display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; height: 100%; }
+
+.s-u .ls-lead {
+  border: 2.5px solid var(--g-blue); padding: 36px 32px;
+  display: flex; flex-direction: column; align-items: flex-start;
 }
-.s-u .tile.lead .tag { color: var(--g-blue); }
-.s-u .tile .name { font-size: 32px; font-weight: 700; margin-bottom: 24px; line-height: 1.1; }
-.s-u .tile .rule { width: 40px; height: 2px; background: var(--mute); margin-bottom: 16px; }
-.s-u .tile.lead .rule { background: var(--g-blue); }
-.s-u .tile .l1 { font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 14px; line-height: 1.3; }
-.s-u .tile .l2 { font-size: 18px; color: var(--mute); line-height: 1.4; }
+.s-u .ls-logo-lg { height: 84px; object-fit: contain; margin-bottom: 20px; }
+.s-u .ls-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
+  letter-spacing: 0.3em; color: var(--g-blue); margin-bottom: 12px;
+}
+.s-u .ls-rule { width: 48px; height: 2.5px; background: var(--g-blue); margin-bottom: 24px; }
+.s-u .ls-big {
+  font-size: 120px; font-weight: 800; color: var(--ink); line-height: 1; letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+.s-u .ls-big-cap {
+  font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600;
+  letter-spacing: 0.15em; color: var(--mute); margin-bottom: 28px;
+}
+.s-u .ls-safety {
+  margin-top: auto; font-size: 22px; font-weight: 700; color: var(--g-blue); line-height: 1.3;
+}
+
+.s-u .ls-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 20px; }
+
+.s-u .ls-card {
+  border: 1.5px solid var(--rule); padding: 22px 18px;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+.s-u .ls-logo { height: 40px; object-fit: contain; margin-bottom: 12px; }
+.s-u .ls-card-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700;
+  letter-spacing: 0.3em; color: var(--mute); margin-bottom: 6px;
+}
+.s-u .ls-card-name { font-size: 22px; font-weight: 700; line-height: 1.1; margin-bottom: 10px; }
+.s-u .ls-card-rule { width: 32px; height: 2px; background: var(--mute); margin-bottom: 10px; }
+.s-u .ls-card-stat { font-size: 28px; font-weight: 800; color: var(--ink); line-height: 1.2; margin-bottom: 4px; }
+.s-u .ls-card-stat span { font-size: 14px; font-weight: 600; color: var(--mute); margin-left: 6px; }
+.s-u .ls-card-detail { font-size: 14px; color: var(--mute); line-height: 1.4; margin-top: auto; }
 
 /* ---------- Bar chart ---------- */
 .s-u .chart { display: flex; flex-direction: column; height: 100%; padding-top: 20px; }

@@ -1,13 +1,17 @@
 import { Eyebrow, Title, Sub } from "./_u";
+import waymoLogo from "../../assets/waymo-logo.png";
+import teslaLogo from "../../assets/tesla.svg";
+import amazonLogo from "../../assets/amazon.svg";
+import mobileyeLogo from "../../assets/mobileye.svg";
+import uberLogo from "../../assets/uber.svg";
 
 export const slideClass = "s-u";
 
-const TILES = [
-  { tag: "LEADER", name: "Google AV", l1: "500K rides / week · 10 cities", l2: "92% fewer serious-injury crashes", lead: true },
-  { tag: "CHALLENGER", name: "Tesla", l1: "~25 unsupervised vehicles", l2: "4–9× human crash rate · FSD v15 dependency" },
-  { tag: "CHALLENGER", name: "Zoox / Amazon", l1: "Free rides only · Vegas + SF", l2: "Paid service pending NHTSA exemption" },
-  { tag: "LICENSOR", name: "Mobileye + VW", l1: "$24.5B 8-yr automotive pipeline", l2: "100K AV fleet target by 2033" },
-  { tag: "DISTRIBUTOR", name: "Uber", l1: "Distribution partner, not competitor", l2: "~13.5B trips in 2025" },
+const COMP = [
+  { logo: teslaLogo, tag: "CHALLENGER", name: "Tesla", stat: "~25", cap: "unsupervised vehicles", detail: "4–9× human crash rate · FSD v15 dependency" },
+  { logo: amazonLogo, tag: "CHALLENGER", name: "Zoox / Amazon", stat: "2", cap: "cities (Vegas + SF)", detail: "Free rides only · paid service pending NHTSA" },
+  { logo: mobileyeLogo, tag: "LICENSOR", name: "Mobileye + VW", hideName: true, stat: "$24.5B", cap: "8-yr automotive pipeline", detail: "100K AV fleet target by 2033" },
+  { logo: uberLogo, tag: "DISTRIBUTOR", name: "Uber", hideName: true, stat: "13.5B", cap: "trips in 2025", detail: "Distribution partner, not operator" },
 ];
 
 export function Slide06() {
@@ -17,16 +21,27 @@ export function Slide06() {
       <Title>Google leads the AV field — and the gap is widening.</Title>
       <Sub>One leader. Two challengers. A licensor. A distributor.</Sub>
       <div className="u-body">
-        <div className="tiles">
-          {TILES.map((t) => (
-            <div key={t.name} className={`tile ${t.lead ? "lead" : ""}`}>
-              <div className="tag">{t.tag}</div>
-              <div className="name">{t.name}</div>
-              <div className="rule" />
-              <div className="l1">{t.l1}</div>
-              <div className="l2">{t.l2}</div>
-            </div>
-          ))}
+        <div className="landscape">
+          <div className="ls-lead">
+            <img src={waymoLogo} className="ls-logo-lg" alt="" />
+            <div className="ls-tag">LEADER</div>
+            <div className="ls-rule" />
+            <div className="ls-big">500K</div>
+            <div className="ls-big-cap">RIDES PER WEEK · 10 CITIES</div>
+            <div className="ls-safety">92% fewer serious-injury crashes</div>
+          </div>
+          <div className="ls-grid">
+            {COMP.map((c) => (
+              <div key={c.name} className="ls-card">
+                <img src={c.logo} className="ls-logo" alt="" />
+                <div className="ls-card-tag">{c.tag}</div>
+                {!c.hideName && <div className="ls-card-name">{c.name}</div>}
+                <div className="ls-card-rule" />
+                <div className="ls-card-stat">{c.stat}<span>{c.cap}</span></div>
+                <div className="ls-card-detail">{c.detail}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
