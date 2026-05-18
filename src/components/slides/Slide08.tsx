@@ -12,22 +12,22 @@ const NODES = [
   { logo: waymoLogo, tag: "DEPLOYMENT", name: "Waymo", d: "170M+ autonomous miles driven.", x: 50, y: 26, hub: true, align: "below" as const },
   { logo: googleMaps, tag: "NAVIGATION", name: "Maps", d: "Most-used navigation product globally; Waze real-time traffic.", x: 22, y: 10, align: "left" as const },
   { logo: androidAuto, tag: "INTERFACE", name: "Android Auto", d: "~70% smartphone share; in nearly every new U.S. vehicle.", x: 78, y: 10, align: "right" as const },
-  { logo: youtube, tag: "ATTENTION", name: "YouTube", d: "2.5B+ monthly users; the in-ride entertainment surface.", x: 14, y: 48, align: "left" as const },
-  { logo: gemini, tag: "FRONTIER AI", name: "Gemini", d: "Pichai's centerpiece; physical-world products are the moat.", x: 86, y: 48, align: "right" as const },
+  { logo: youtube, tag: "ATTENTION", name: "YouTube", d: "2.5B+ monthly users; the in-ride entertainment surface.", x: 22, y: 48, align: "left" as const },
+  { logo: gemini, tag: "FRONTIER AI", name: "Gemini", d: "Pichai's centerpiece; physical-world products are the moat.", x: 78, y: 48, align: "right" as const },
   { logo: googleCloud, tag: "INFRASTRUCTURE", name: "Google Cloud", d: "Fastest-growing major cloud; TPU silicon; Vertex AI.", x: 36, y: 76, align: "right" as const },
 ];
 
 const PATHS = [
   "M 50 26 L 22 10",
   "M 50 26 L 78 10",
-  "M 50 26 Q 20 22 14 48",
-  "M 50 26 Q 80 22 86 48",
+  "M 50 26 Q 24 22 22 48",
+  "M 50 26 Q 76 22 78 48",
   "M 50 26 Q 86 50 36 76",
   "M 22 10 Q 50 20 78 10",
-  "M 78 10 Q 74 29 86 48",
-  "M 86 48 Q 58 62 36 76",
-  "M 36 76 Q 24 62 14 48",
-  "M 14 48 Q 26 29 22 10",
+  "M 78 10 Q 72 29 78 48",
+  "M 78 48 Q 54 62 36 76",
+  "M 36 76 Q 28 62 22 48",
+  "M 22 48 Q 28 29 22 10",
 ];
 
 export function Slide08() {
