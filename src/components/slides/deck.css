@@ -1687,3 +1687,74 @@ html, body {
    =========================================================== */
 .s-u .u-eyebrow { font-size: 22px; }
 .s-u .u-source { font-size: 22px; color: var(--ink-2); }
+
+/* 40ft readability pass: no presentation content below 22px; muted text brought up to ink-2. */
+.s-u .two-col .col .tag,
+.s-u .tl-item .yr,
+.s-u .tl-item .desc,
+.s-u .tl-footnote,
+.s-u .three-col .c .tag,
+.s-u .neg-split .col .tag,
+.s-u .tile .tag,
+.s-u .chart .labels .lab,
+.s-u .opt-card .lbl,
+.s-u.recommend .r-eyebrow,
+.s-u.recommend .r-tag,
+.s-u .phase .ph,
+.s-u .phase .yr,
+.s-u.closing .c-eye,
+.s-u .hub-node .hn-num,
+.s-u .reason .n,
+.s-u .p-tile .ptag,
+.s-u .risk2 .head,
+.s-u .hex-cell .hc-n,
+.s-u .axis-stages,
+.s-u .axis-pt .role,
+.s-u .axis-off .off-label,
+.s-u .axis-off .role,
+.s-u .tomb .tag,
+.s-u .fly-card .fc-tag,
+.s-u .fly-aside-tag,
+.s-u .pyr-cap-tag,
+.s-u .ladder-head,
+.s-u .ladder-row .lr-sev,
+.s-u .stage-board .sb-role,
+.s-u .hub-card .hc-tag,
+.s-u .hub-foot .hf-tag {
+  font-size: 22px;
+  color: var(--ink-2);
+}
+
+.s-u .three-col .c p,
+.s-u .neg-split .col .big-cap,
+.s-u .neg-split .col .detail,
+.s-u .tile .l1,
+.s-u .tile .l2,
+.s-u .opt-card .play,
+.s-u .opt-card .verdict,
+.s-u .phase .desc,
+.s-u.closing .c-credits .meta,
+.s-u .hub-node .hn-desc,
+.s-u .p-tile .pdesc,
+.s-u .portfolio-cap,
+.s-u .mech .mb .md,
+.s-u .risk2 .row .n,
+.s-u .risk2 .row .m,
+.s-u .matrix .m-axis.y .lbl,
+.s-u .matrix .m-axis.y .hi,
+.s-u .matrix .m-axis.y .lo,
+.s-u .matrix .m-axis.x .lbl,
+.s-u .matrix .m-axis.x .lo,
+.s-u .matrix .m-axis.x .hi,
+.s-u .hex-cell .hc-d,
+.s-u .axis-pt .l1,
+.s-u .axis-pt .l2,
+.s-u .axis-off .l1,
+.s-u .axis-off .l2,
+.s-u .fly-card .fc-d,
+.s-u .hub-card .hc-d {
+  font-size: 22px;
+  color: var(--ink-2);
+}
+
+.s-u .hub-node { width: 360px; padding: 20px 22px; }
