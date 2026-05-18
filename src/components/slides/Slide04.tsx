@@ -19,13 +19,13 @@ export function Slide04() {
       <div className="u-body">
         <div className="matrix">
           <div className="m-axis y">
-            <span className="lbl">CAPITAL INTENSITY</span>
             <span className="hi">HIGH</span>
+            <span className="lbl">CAPITAL INTENSITY</span>
             <span className="lo">LOW</span>
           </div>
           <div className="m-axis x">
-            <span className="lbl">DATA FLYWHEEL</span>
             <span className="lo">WEAK</span>
+            <span className="lbl">DATA FLYWHEEL</span>
             <span className="hi">STRONG</span>
           </div>
           <div className="m-grid">
