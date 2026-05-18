@@ -906,8 +906,8 @@ html, body {
   font-size: 18px; color: var(--mute-2); letter-spacing: 0.18em;
 }
 .s-u .u-source {
-  position: absolute; bottom: 110px; left: 96px;
-  font-size: 18px; color: var(--mute-2); font-style: italic;
+  position: absolute; bottom: 18px; right: 96px;
+  font-size: 16px; color: var(--mute-2); font-style: italic;
 }
 
 /* ---------- Slide 1 · Title (dark accent bar) ---------- */
