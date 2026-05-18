@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -12,7 +12,7 @@ export function Slide10() {
   return (
     <>
       <Eyebrow>10 · MISSION FIT</Eyebrow>
-      <Title>Three mechanisms. All operational in 2026.</Title>
+      <Title>The AV unit already delivers on Google's mission.</Title>
       <Sub>"Organize the world's information and make it universally accessible and useful."</Sub>
       <div className="u-body">
         <div className="mech-list">
@@ -27,7 +27,6 @@ export function Slide10() {
           ))}
         </div>
       </div>
-      <Footer n={10} />
     </>
   );
 }

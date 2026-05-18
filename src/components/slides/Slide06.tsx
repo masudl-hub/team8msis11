@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -14,7 +14,7 @@ export function Slide06() {
   return (
     <>
       <Eyebrow>06 · LANDSCAPE</Eyebrow>
-      <Title>Five actors in 2026.</Title>
+      <Title>Google leads the AV field — and the gap is widening.</Title>
       <Sub>One leader. Two challengers. A licensor. A distributor.</Sub>
       <div className="u-body">
         <div className="tiles">
@@ -29,7 +29,6 @@ export function Slide06() {
           ))}
         </div>
       </div>
-      <Footer n={6} />
     </>
   );
 }

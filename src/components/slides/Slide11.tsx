@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -14,7 +14,7 @@ export function Slide11() {
   return (
     <>
       <Eyebrow>11 · RISKS</Eyebrow>
-      <Title>Five risks. Five mitigations.</Title>
+      <Title>Every foreseeable risk has a named countermeasure.</Title>
       <Sub>Each one names a lever we will pull if it materializes.</Sub>
       <div className="u-body">
         <div className="risk2">
@@ -32,7 +32,6 @@ export function Slide11() {
           ))}
         </div>
       </div>
-      <Footer n={11} />
     </>
   );
 }

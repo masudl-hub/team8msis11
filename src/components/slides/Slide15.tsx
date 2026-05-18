@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -25,7 +25,6 @@ export function Slide15() {
           ))}
         </div>
       </div>
-      <Footer n={15} />
     </>
   );
 }

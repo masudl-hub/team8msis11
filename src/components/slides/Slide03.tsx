@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -14,8 +14,8 @@ export function Slide03() {
   return (
     <>
       <Eyebrow>03 · 2014 MOTIVATION</Eyebrow>
-      <Title>Why Google invested in 2014.</Title>
-      <Sub>Five motivations, all platform-extension. None of them argue for being a car company.</Sub>
+      <Title>The 2014 bet was a platform play, not a vehicle play.</Title>
+      <Sub>Five motivations — all Google-platform extensions. None argue for being a car company.</Sub>
       <div className="u-body">
         <div className="moti-list">
           {M.map((m) => (
@@ -31,7 +31,6 @@ export function Slide03() {
         </div>
       </div>
       <div className="u-source">Source: HBS Google Car case (pp. 1, 2, 4, 6, 7)</div>
-      <Footer n={3} />
     </>
   );
 }

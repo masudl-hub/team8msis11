@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -6,8 +6,8 @@ export function Slide07() {
   return (
     <>
       <Eyebrow>07 · NOTABLE ABSENCES</Eyebrow>
-      <Title>Two best-capitalized rivals. Both gone.</Title>
-      <Sub>Both tried integration. Both failed in the way B&amp;C 1995 predicted.</Sub>
+      <Title>$20B in rival spending proves integration kills AV programs.</Title>
+      <Sub>Cruise and Titan — gone exactly the way Bower &amp; Christensen 1995 predicted.</Sub>
       <div className="u-body">
         <div className="neg-split">
           <div className="col">
@@ -32,7 +32,6 @@ export function Slide07() {
         </div>
       </div>
       <div className="u-source">Sources: NPR Dec 11 2024 · TechCrunch Feb 27 2024</div>
-      <Footer n={7} />
     </>
   );
 }

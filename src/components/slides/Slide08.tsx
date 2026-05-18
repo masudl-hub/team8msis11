@@ -1,4 +1,4 @@
-import { Eyebrow, Title, Sub, Footer } from "./_u";
+import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
@@ -33,7 +33,6 @@ export function Slide08() {
       <div className="portfolio-cap">
         Microsoft has the AI but no physical surface. Apple killed its bet. Amazon lacks the frontier model. Tesla lacks the platform. <strong>Google's combination is genuinely difficult to replicate.</strong>
       </div>
-      <Footer n={8} />
     </>
   );
 }
