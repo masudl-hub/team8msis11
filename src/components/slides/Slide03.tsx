@@ -2,19 +2,18 @@ import { Eyebrow, Title, Sub } from "./_u";
 
 export const slideClass = "s-u";
 
-// Pentagon positions around hub. Center (864, 320), rx=620, ry=260.
-// Cards anchored by center; we offset via translate(-50%,-50%).
+// Body viewBox: 1728 × 640. Hub at (864, 310), pentagon nodes around it.
 const SPOKES = [
-  { n: "01", t: "Safety",              d: "32K+ U.S. fatalities · 1.2M+ globally per year.",      x: 864,  y: 30  },
-  { n: "02", t: "Accessibility",       d: "Mobility for the elderly, disabled, and unlicensed.",  x: 1484, y: 240 },
-  { n: "03", t: "Attention liberation",d: "Non-driving riders become Gmail, Maps, YouTube users.",x: 1230, y: 600 },
-  { n: "04", t: "Physical-world data", d: "Bridges the offline world to Google's stack.",         x: 498,  y: 600 },
-  { n: "05", t: "Strategic options",   d: "X moonshot culture; no near-term revenue gate.",       x: 244,  y: 240 },
+  { n: "01", t: "Safety",              d: "32K+ U.S. fatalities · 1.2M+ globally per year.",      x: 864,  y: 70  },
+  { n: "02", t: "Accessibility",       d: "Mobility for the elderly, disabled, and unlicensed.",  x: 1470, y: 230 },
+  { n: "03", t: "Attention liberation",d: "Non-driving riders become Gmail, Maps, YouTube users.",x: 1240, y: 560 },
+  { n: "04", t: "Physical-world data", d: "Bridges the offline world to Google's stack.",         x: 488,  y: 560 },
+  { n: "05", t: "Strategic options",   d: "X moonshot culture; no near-term revenue gate.",       x: 258,  y: 230 },
 ];
 
-const HUB = { x: 864, y: 320 };
+const HUB = { x: 864, y: 310 };
 const VB_W = 1728;
-const VB_H = 660;
+const VB_H = 640;
 
 export function Slide03() {
   return (
