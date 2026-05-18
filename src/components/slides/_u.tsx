@@ -2,8 +2,13 @@ import type { ReactNode } from "react";
 
 export const FOOTER_TEXT = "MSIS 511 · TEAM 8 · GOOGLE CAR · MAY 18, 2026";
 
-export function Footer(_: { n: number }) {
-  return null;
+export function Footer({ n }: { n: number }) {
+  return (
+    <div className="u-footer">
+      <span>{FOOTER_TEXT}</span>
+      <span>{String(n).padStart(2, "0")}</span>
+    </div>
+  );
 }
 
 export function Eyebrow({ children }: { children: ReactNode }) {
@@ -15,5 +20,5 @@ export function Title({ children }: { children: ReactNode }) {
 }
 
 export function Sub({ children }: { children: ReactNode }) {
-  return <p className="u-sub my-[27px]">{children}</p>;
+  return <p className="u-sub">{children}</p>;
 }

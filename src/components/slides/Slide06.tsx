@@ -1,71 +1,35 @@
-import { Eyebrow, Title, Sub } from "./_u";
+import { Eyebrow, Title, Sub, Footer } from "./_u";
 
 export const slideClass = "s-u";
 
-type Player = { role: string; nm: string; sig: string; lead?: boolean };
-type Stage = { k: string; players: Player[] };
-const STAGES: Stage[] = [
-  {
-    k: "R&D",
-    players: [
-      { role: "LICENSOR", nm: "Mobileye + VW", sig: "$24.5B 8-yr pipeline · 100K AV fleet by 2033" },
-    ],
-  },
-  {
-    k: "PILOT",
-    players: [
-      { role: "CHALLENGER", nm: "Tesla", sig: "~25 unsupervised vehicles · 4–9× human crash rate (FSD v15)" },
-    ],
-  },
-  {
-    k: "PAID PILOT",
-    players: [
-      { role: "CHALLENGER", nm: "Zoox / Amazon", sig: "Free rides only · Vegas + SF · paid pending NHTSA exemption" },
-    ],
-  },
-  {
-    k: "SCALED OPERATION",
-    players: [
-      { role: "LEADER", nm: "Google AV", sig: "500K rides / week · 10 cities · 92% fewer serious-injury crashes", lead: true },
-    ],
-  },
+const TILES = [
+  { tag: "LEADER", name: "Google AV", l1: "500K rides / week · 10 cities", l2: "92% fewer serious-injury crashes", lead: true },
+  { tag: "CHALLENGER", name: "Tesla", l1: "~25 unsupervised vehicles", l2: "4–9× human crash rate · FSD v15 dependency" },
+  { tag: "CHALLENGER", name: "Zoox / Amazon", l1: "Free rides only · Vegas + SF", l2: "Paid service pending NHTSA exemption" },
+  { tag: "LICENSOR", name: "Mobileye + VW", l1: "$24.5B 8-yr automotive pipeline", l2: "100K AV fleet target by 2033" },
+  { tag: "DISTRIBUTOR", name: "Uber", l1: "Distribution partner, not competitor", l2: "~13.5B trips in 2025" },
 ];
-
-const OFFAXIS = { role: "DISTRIBUTOR", nm: "Uber", sig: "Partner, not competitor · ~13.5B trips in 2025" };
 
 export function Slide06() {
   return (
     <>
       <Eyebrow>06 · LANDSCAPE</Eyebrow>
-      <Title>Treat Google AV as the scaled operator; every rival remains upstream.</Title>
-      <Sub>​</Sub>
+      <Title>Five actors in 2026.</Title>
+      <Sub>One leader. Two challengers. A licensor. A distributor.</Sub>
       <div className="u-body">
-        <div className="stage-board">
-          <div className="sb-axis-label">MATURITY INCREASES →</div>
-          <div className="sb-grid">
-            {STAGES.map((s) => (
-              <div key={s.k} className={`sb-col ${s.players.some((p) => p.lead) ? "lead" : ""}`}>
-                <div className="sb-stage">{s.k}</div>
-                {s.players.map((p) => (
-                  <div key={p.nm} className={`sb-card ${p.lead ? "lead" : ""}`}>
-                    <div className="sb-role">{p.role}</div>
-                    <div className="sb-nm">{p.nm}</div>
-                    <div className="sb-sig">{p.sig}</div>
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-          <div className="sb-off">
-            <div className="sb-off-tag">OFF-AXIS · DISTRIBUTION LAYER</div>
-            <div className="sb-off-card">
-              <div className="sb-role">{OFFAXIS.role}</div>
-              <div className="sb-nm">{OFFAXIS.nm}</div>
-              <div className="sb-sig">{OFFAXIS.sig}</div>
+        <div className="tiles">
+          {TILES.map((t) => (
+            <div key={t.name} className={`tile ${t.lead ? "lead" : ""}`}>
+              <div className="tag">{t.tag}</div>
+              <div className="name">{t.name}</div>
+              <div className="rule" />
+              <div className="l1">{t.l1}</div>
+              <div className="l2">{t.l2}</div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
+      <Footer n={6} />
     </>
   );
 }

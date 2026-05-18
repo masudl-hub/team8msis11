@@ -9,7 +9,7 @@ const C = [
 export function Slide09() {
   return (
     <>
-      <div className="r-eyebrow">09 · RECOMMENDATION TO PICHAI</div>
+      <div className="r-eyebrow">RECOMMENDATION TO PICHAI</div>
       <div className="r-rule" />
       <div className="r-components">
         {C.map((c) => (
@@ -20,6 +20,10 @@ export function Slide09() {
         ))}
       </div>
       <div className="r-tag">OPERATE · LAYER · INTEGRATE</div>
+      <div className="u-footer">
+        <span>MSIS 511 · TEAM 8 · GOOGLE CAR · MAY 18, 2026</span>
+        <span>09</span>
+      </div>
     </>
   );
 }
