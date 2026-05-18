@@ -37,10 +37,11 @@ export function Slide06() {
   return (
     <>
       <Eyebrow>06 · LANDSCAPE</Eyebrow>
-      <Title>Google AV is the only operator at scale — every rival is still upstream.</Title>
+      <Title>Treat Google AV as the scaled operator; every rival remains upstream.</Title>
       <Sub>​</Sub>
       <div className="u-body">
         <div className="stage-board">
+          <div className="sb-axis-label">MATURITY INCREASES →</div>
           <div className="sb-grid">
             {STAGES.map((s) => (
               <div key={s.k} className={`sb-col ${s.players.some((p) => p.lead) ? "lead" : ""}`}>

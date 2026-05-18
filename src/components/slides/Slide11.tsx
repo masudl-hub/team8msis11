@@ -14,7 +14,7 @@ export function Slide11() {
   return (
     <>
       <Eyebrow>11 · RISKS</Eyebrow>
-      <Title>Each of the five plausible risks already has a named lever.</Title>
+      <Title>Manage each plausible risk with a named operating lever.</Title>
       <Sub>​</Sub>
       <div className="u-body">
         <div className="ladder">

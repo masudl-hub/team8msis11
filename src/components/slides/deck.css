@@ -1585,6 +1585,11 @@ html, body {
    Slide 6 (rebuilt) · Stage scoreboard — no overlapping cards
    =========================================================== */
 .s-u .stage-board { display: flex; flex-direction: column; gap: 36px; height: 100%; }
+.s-u .stage-board .sb-axis-label {
+  align-self: flex-end;
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
+  letter-spacing: 0.26em; color: var(--g-blue); margin-bottom: -16px;
+}
 .s-u .stage-board .sb-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; flex: 1;
 }
@@ -1631,16 +1636,16 @@ html, body {
    =========================================================== */
 .s-u .hub-wrap { display: flex; flex-direction: column; height: 100%; gap: 24px; }
 .s-u .hub-grid {
-  display: grid; grid-template-columns: 1fr 360px 1fr; gap: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr) 340px minmax(0, 1fr); gap: 42px;
   align-items: center; flex: 1;
 }
-.s-u .hub-col { display: flex; flex-direction: column; gap: 22px; }
+.s-u .hub-col { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
 .s-u .hub-card {
   position: relative; background: var(--paper); border: 2px solid var(--ink);
   padding: 18px 22px; display: flex; flex-direction: column; gap: 4px;
 }
-.s-u .hub-card.right-align { text-align: right; margin-right: 60px; }
-.s-u .hub-card.left-align { text-align: left; margin-left: 60px; }
+.s-u .hub-card.right-align { text-align: right; margin-right: 0; }
+.s-u .hub-card.left-align { text-align: left; margin-left: 0; }
 .s-u .hub-card .hc-tag {
   font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
   letter-spacing: 0.28em; color: var(--g-blue);
@@ -1648,24 +1653,25 @@ html, body {
 .s-u .hub-card .hc-nm { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
 .s-u .hub-card .hc-d { font-size: 20px; color: var(--ink-2); line-height: 1.4; }
 .s-u .hub-card .hc-spoke {
-  position: absolute; top: 50%; right: -60px; width: 60px; height: 2px;
+  position: absolute; top: 50%; right: -42px; width: 42px; height: 2px;
   background: var(--g-blue); transform: translateY(-50%);
 }
-.s-u .hub-card .hc-spoke.left { left: -60px; right: auto; }
+.s-u .hub-card .hc-spoke.left { left: -42px; right: auto; }
 .s-u .hub-center { display: flex; justify-content: center; align-items: center; }
-.s-u .hub-core {
-  width: 320px; height: 320px; border-radius: 50%;
+.s-u .hub-grid .hub-core {
+  position: relative; transform: none;
+  width: 292px; height: 292px; border-radius: 50%;
   background: var(--g-blue); color: #fff;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 24px;
-  box-shadow: 0 0 0 14px rgba(26,115,232,0.12);
+  box-shadow: 0 0 0 10px rgba(26,115,232,0.12);
 }
-.s-u .hub-core .hc-core-tag {
+.s-u .hub-grid .hub-core .hc-core-tag {
   font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
   letter-spacing: 0.32em; margin-bottom: 14px;
 }
-.s-u .hub-core .hc-core-stat { font-size: 84px; font-weight: 800; line-height: 1; }
-.s-u .hub-core .hc-core-cap { font-size: 22px; opacity: 0.92; margin-top: 6px; }
+.s-u .hub-grid .hub-core .hc-core-stat { font-size: 84px; font-weight: 800; line-height: 1; }
+.s-u .hub-grid .hub-core .hc-core-cap { font-size: 22px; opacity: 0.92; margin-top: 6px; }
 
 .s-u .hub-foot { border-top: 2px solid var(--ink); padding-top: 18px; }
 .s-u .hub-foot .hf-tag {
@@ -1681,3 +1687,74 @@ html, body {
    =========================================================== */
 .s-u .u-eyebrow { font-size: 22px; }
 .s-u .u-source { font-size: 22px; color: var(--ink-2); }
+
+/* 40ft readability pass: no presentation content below 22px; muted text brought up to ink-2. */
+.s-u .two-col .col .tag,
+.s-u .tl-item .yr,
+.s-u .tl-item .desc,
+.s-u .tl-footnote,
+.s-u .three-col .c .tag,
+.s-u .neg-split .col .tag,
+.s-u .tile .tag,
+.s-u .chart .labels .lab,
+.s-u .opt-card .lbl,
+.s-u.recommend .r-eyebrow,
+.s-u.recommend .r-tag,
+.s-u .phase .ph,
+.s-u .phase .yr,
+.s-u.closing .c-eye,
+.s-u .hub-node .hn-num,
+.s-u .reason .n,
+.s-u .p-tile .ptag,
+.s-u .risk2 .head,
+.s-u .hex-cell .hc-n,
+.s-u .axis-stages,
+.s-u .axis-pt .role,
+.s-u .axis-off .off-label,
+.s-u .axis-off .role,
+.s-u .tomb .tag,
+.s-u .fly-card .fc-tag,
+.s-u .fly-aside-tag,
+.s-u .pyr-cap-tag,
+.s-u .ladder-head,
+.s-u .ladder-row .lr-sev,
+.s-u .stage-board .sb-role,
+.s-u .hub-card .hc-tag,
+.s-u .hub-foot .hf-tag {
+  font-size: 22px;
+  color: var(--ink-2);
+}
+
+.s-u .three-col .c p,
+.s-u .neg-split .col .big-cap,
+.s-u .neg-split .col .detail,
+.s-u .tile .l1,
+.s-u .tile .l2,
+.s-u .opt-card .play,
+.s-u .opt-card .verdict,
+.s-u .phase .desc,
+.s-u.closing .c-credits .meta,
+.s-u .hub-node .hn-desc,
+.s-u .p-tile .pdesc,
+.s-u .portfolio-cap,
+.s-u .mech .mb .md,
+.s-u .risk2 .row .n,
+.s-u .risk2 .row .m,
+.s-u .matrix .m-axis.y .lbl,
+.s-u .matrix .m-axis.y .hi,
+.s-u .matrix .m-axis.y .lo,
+.s-u .matrix .m-axis.x .lbl,
+.s-u .matrix .m-axis.x .lo,
+.s-u .matrix .m-axis.x .hi,
+.s-u .hex-cell .hc-d,
+.s-u .axis-pt .l1,
+.s-u .axis-pt .l2,
+.s-u .axis-off .l1,
+.s-u .axis-off .l2,
+.s-u .fly-card .fc-d,
+.s-u .hub-card .hc-d {
+  font-size: 22px;
+  color: var(--ink-2);
+}
+
+.s-u .hub-node { width: 360px; padding: 20px 22px; }

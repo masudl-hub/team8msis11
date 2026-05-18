@@ -15,7 +15,7 @@ export function Slide05() {
   return (
     <>
       <Eyebrow>05 · WHY OPERATOR-FIRST</Eyebrow>
-      <Title>Operator-first is the only path that clears all six structural filters.</Title>
+      <Title>Use operator-first because it clears all six structural filters.</Title>
       <Sub>​</Sub>
       <div className="u-body">
         <div className="hex">
