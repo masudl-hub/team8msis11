@@ -891,7 +891,7 @@ html, body {
 .s-u .u-title em { font-style: normal; color: var(--g-blue); }
 .s-u .u-sub {
   position: absolute; top: 280px; left: 96px; right: 96px;
-  font-size: 26px; color: var(--mute); font-style: italic; line-height: 1.4;
+  font-size: 28px; color: var(--ink-2); font-style: italic; line-height: 1.4;
 }
 .s-u .u-body {
   position: absolute; top: 380px; left: 96px; right: 96px; bottom: 60px;
@@ -903,11 +903,11 @@ html, body {
   display: flex; justify-content: space-between; align-items: center;
   border-top: 1px solid var(--rule); padding-top: 18px;
   font-family: 'JetBrains Mono', ui-monospace, monospace;
-  font-size: 18px; color: var(--mute-2); letter-spacing: 0.18em;
+  font-size: 20px; color: var(--mute); letter-spacing: 0.18em;
 }
 .s-u .u-source {
-  position: absolute; bottom: 18px; right: 96px;
-  font-size: 16px; color: var(--mute-2); font-style: italic;
+  position: absolute; bottom: 22px; right: 96px;
+  font-size: 20px; color: var(--ink-2); font-style: italic;
 }
 
 /* ---------- Slide 1 · Title (dark accent bar) ---------- */
