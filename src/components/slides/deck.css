@@ -1349,9 +1349,9 @@ html, body {
 }
 .s-u .matrix .m-cell.win .mc-k { color: var(--g-blue); }
 .s-u .matrix .m-cell .mc-nm { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
-.s-u .matrix .m-cell .mc-play { font-size: 18px; line-height: 1.4; color: var(--ink-2); }
+.s-u .matrix .m-cell .mc-play { font-size: 22px; line-height: 1.4; color: var(--ink-2); }
 .s-u .matrix .m-cell .mc-verdict {
-  font-size: 18px; line-height: 1.4; color: var(--ink); font-weight: 600;
+  font-size: 22px; line-height: 1.4; color: var(--ink); font-weight: 600;
   padding-top: 10px; border-top: 1px solid var(--rule); margin-top: auto;
 }
 .s-u .matrix .m-cell.win .mc-verdict { color: var(--g-blue); }
@@ -1362,12 +1362,12 @@ html, body {
 }
 .s-u .matrix .m-axis.y .lbl {
   writing-mode: vertical-rl; transform: rotate(180deg);
-  font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.36em;
-  color: var(--mute); font-weight: 700;
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.36em;
+  color: var(--ink-2); font-weight: 700;
 }
 .s-u .matrix .m-axis.y .hi, .s-u .matrix .m-axis.y .lo {
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.28em;
-  color: var(--mute); font-weight: 700; position: absolute; right: 0;
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.28em;
+  color: var(--ink-2); font-weight: 700; position: absolute; right: 0;
 }
 .s-u .matrix .m-axis.y .hi { top: 0; }
 .s-u .matrix .m-axis.y .lo { bottom: 0; }
@@ -1376,12 +1376,12 @@ html, body {
   display: flex; align-items: center; justify-content: space-between;
 }
 .s-u .matrix .m-axis.x .lbl {
-  font-family: 'JetBrains Mono', monospace; font-size: 14px; letter-spacing: 0.36em;
-  color: var(--mute); font-weight: 700; position: absolute; left: 50%; transform: translateX(-50%);
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.36em;
+  color: var(--ink-2); font-weight: 700; position: absolute; left: 50%; transform: translateX(-50%);
 }
 .s-u .matrix .m-axis.x .lo, .s-u .matrix .m-axis.x .hi {
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.28em;
-  color: var(--mute); font-weight: 700;
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.28em;
+  color: var(--ink-2); font-weight: 700;
 }
 
 /* ===========================================================
