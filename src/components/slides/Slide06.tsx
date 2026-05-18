@@ -1,4 +1,5 @@
-import { Eyebrow, Title, Sub } from "./_u";
+import { Eyebrow, Sub } from "./_u";
+import { PresenterVideo } from "./PresenterVideo";
 import waymoLogo from "../../assets/waymo-logo.png";
 import teslaLogo from "../../assets/tesla.svg";
 import amazonLogo from "../../assets/amazon.svg";
@@ -18,8 +19,9 @@ export function Slide06() {
   return (
     <>
       <Eyebrow>06 · LANDSCAPE</Eyebrow>
-      <Title>Google leads the AV field — and the gap is widening.</Title>
+      <h2 className="u-title with-video">Google leads the AV field — and the gap is widening.</h2>
       <Sub>One leader. Two challengers. A licensor. A distributor.</Sub>
+      <PresenterVideo src="/slide6-presenter.mp4" />
       <div className="u-body">
         <div className="landscape">
           <div className="ls-lead">
