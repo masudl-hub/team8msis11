@@ -1455,48 +1455,34 @@ html, body {
 .s-u .axis-off .l2 { font-size: 14px; color: var(--mute); line-height: 1.3; margin-top: 2px; }
 
 /* ===========================================================
-   Slide 7 · Timeline + twin tombstones
+   Slide 7 · Verdict bar + twin tombstones
    =========================================================== */
-.s-u .tomb-wrap { display: flex; flex-direction: column; gap: 28px; height: 100%; }
-.s-u .tomb-timeline {
-  position: relative; height: 90px; margin: 0 40px;
+.s-u .verdict-bar {
+  display: flex; align-items: center; justify-content: center; gap: 28px;
+  background: var(--ink); color: var(--paper);
+  padding: 22px 32px; margin-bottom: 36px;
 }
-.s-u .tomb-timeline .tt-bar {
-  position: absolute; top: 50%; left: 0; right: 0; height: 2px; background: var(--ink);
+.s-u .verdict-bar .vb-l, .s-u .verdict-bar .vb-r {
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
+  letter-spacing: 0.28em;
 }
-.s-u .tomb-timeline .tt-yr {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
-  color: var(--mute); background: var(--paper); padding: 0 10px;
-}
-.s-u .tomb-timeline .tt-yr.left { left: 0; }
-.s-u .tomb-timeline .tt-yr.right { right: 0; }
-.s-u .tomb-timeline .tt-mark { position: absolute; top: 50%; transform: translate(-50%, -50%); text-align: center; }
-.s-u .tomb-timeline .tt-mark .x { font-size: 28px; color: var(--g-red); font-weight: 800; line-height: 1; }
-.s-u .tomb-timeline .tt-mark .lbl {
-  position: absolute; top: -42px; left: 50%; transform: translateX(-50%);
-  white-space: nowrap; font-size: 14px; color: var(--ink-2); font-weight: 600;
-}
-.s-u .tomb-timeline .tt-mark .lbl.alt { top: 30px; }
-.s-u .tomb-timeline .tt-bracket {
-  position: absolute; left: 50%; transform: translateX(-50%); top: 64px;
-  font-family: 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.32em;
-  color: var(--g-blue); font-weight: 700;
-}
+.s-u .verdict-bar .vb-r { color: var(--g-yellow); }
+.s-u .verdict-bar .vb-arrow { font-size: 32px; font-weight: 700; color: var(--g-yellow); }
+
 .s-u .tomb-pair {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; flex: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
 }
-.s-u .tomb { padding: 28px 32px; border-left: 4px solid var(--ink); background: var(--paper-2); }
+.s-u .tomb { padding: 32px 36px; border-left: 4px solid var(--ink); background: var(--paper-2); }
 .s-u .tomb .tag {
-  font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
-  letter-spacing: 0.32em; color: var(--mute); margin-bottom: 10px;
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+  letter-spacing: 0.32em; color: var(--ink-2); margin-bottom: 14px;
 }
-.s-u .tomb .name { font-size: 36px; font-weight: 700; margin-bottom: 18px; }
-.s-u .tomb .big { font-size: 78px; font-weight: 800; color: var(--g-blue); line-height: 1; margin-bottom: 6px; }
-.s-u .tomb .big-cap { font-size: 16px; color: var(--mute); margin-bottom: 22px; }
-.s-u .tomb .mini-rule { width: 48px; height: 2px; background: var(--ink); margin-bottom: 12px; }
-.s-u .tomb .fate { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
-.s-u .tomb .detail { font-size: 18px; color: var(--mute); line-height: 1.5; }
+.s-u .tomb .name { font-size: 40px; font-weight: 700; margin-bottom: 22px; }
+.s-u .tomb .big { font-size: 84px; font-weight: 800; color: var(--g-blue); line-height: 1; margin-bottom: 8px; }
+.s-u .tomb .big-cap { font-size: 22px; color: var(--ink-2); margin-bottom: 26px; }
+.s-u .tomb .mini-rule { width: 56px; height: 2px; background: var(--ink); margin-bottom: 14px; }
+.s-u .tomb .fate { font-size: 26px; font-weight: 700; margin-bottom: 12px; color: var(--ink); }
+.s-u .tomb .detail { font-size: 22px; color: var(--ink-2); line-height: 1.5; }
 
 /* ===========================================================
    Slide 8 · Circular flywheel
