@@ -1658,7 +1658,7 @@ html, body {
 }
 .s-u .hub-card .hc-spoke.left { left: -42px; right: auto; }
 .s-u .hub-center { display: flex; justify-content: center; align-items: center; }
-.s-u .hub-core {
+.s-u .hub-grid .hub-core {
   position: relative; transform: none;
   width: 292px; height: 292px; border-radius: 50%;
   background: var(--g-blue); color: #fff;
@@ -1666,12 +1666,12 @@ html, body {
   text-align: center; padding: 24px;
   box-shadow: 0 0 0 10px rgba(26,115,232,0.12);
 }
-.s-u .hub-core .hc-core-tag {
+.s-u .hub-grid .hub-core .hc-core-tag {
   font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
   letter-spacing: 0.32em; margin-bottom: 14px;
 }
-.s-u .hub-core .hc-core-stat { font-size: 84px; font-weight: 800; line-height: 1; }
-.s-u .hub-core .hc-core-cap { font-size: 22px; opacity: 0.92; margin-top: 6px; }
+.s-u .hub-grid .hub-core .hc-core-stat { font-size: 84px; font-weight: 800; line-height: 1; }
+.s-u .hub-grid .hub-core .hc-core-cap { font-size: 22px; opacity: 0.92; margin-top: 6px; }
 
 .s-u .hub-foot { border-top: 2px solid var(--ink); padding-top: 18px; }
 .s-u .hub-foot .hf-tag {
