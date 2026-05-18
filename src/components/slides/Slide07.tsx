@@ -6,47 +6,36 @@ export function Slide07() {
   return (
     <>
       <Eyebrow>07 · NOTABLE ABSENCES</Eyebrow>
-      <Title>The two best-capitalized rivals folded AVs into a parent P&L — and both failed.</Title>
+      <Title>Reject the parent-P&L model — the two rivals who tried it both quit in 2024.</Title>
       <Sub>​</Sub>
       <div className="u-body">
-        <div className="tomb-wrap">
-          <div className="tomb-timeline">
-            <div className="tt-bar" />
-            <span className="tt-yr left">2015</span>
-            <span className="tt-yr right">2024</span>
-            <div className="tt-mark" style={{ left: "94%" }}>
-              <div className="x">✕</div>
-              <div className="lbl">Titan cancelled · Feb 2024</div>
-            </div>
-            <div className="tt-mark" style={{ left: "98%" }}>
-              <div className="x">✕</div>
-              <div className="lbl alt">Cruise shut · Dec 2024</div>
-            </div>
-            <div className="tt-bracket"><span>INTEGRATION INTO PARENT P&amp;L</span></div>
+        <div className="verdict-bar">
+          <span className="vb-l">INTEGRATED INTO PARENT P&amp;L</span>
+          <span className="vb-arrow">→</span>
+          <span className="vb-r">BOTH KILLED IN 2024</span>
+        </div>
+        <div className="tomb-pair">
+          <div className="tomb">
+            <div className="tag">GM · CRUISE</div>
+            <div className="name">Cruise</div>
+            <div className="big">$10B+</div>
+            <div className="big-cap">spent before shutdown</div>
+            <div className="mini-rule" />
+            <div className="fate">Robotaxi unit shut · December 2024</div>
+            <div className="detail">Run inside GM's mainstream-auto P&amp;L. An October 2023 SF pedestrian incident ended the company. Remaining capital was redirected to Super Cruise.</div>
           </div>
-          <div className="tomb-pair">
-            <div className="tomb">
-              <div className="tag">GM · CRUISE</div>
-              <div className="name">Cruise</div>
-              <div className="big">$10B+</div>
-              <div className="big-cap">spent before shutdown</div>
-              <div className="mini-rule" />
-              <div className="fate">Robotaxi unit shut · December 2024</div>
-              <div className="detail">Integrated into GM's mainstream-auto P&amp;L. Oct 2023 SF pedestrian incident ended the company. Capital redirected to Super Cruise.</div>
-            </div>
-            <div className="tomb">
-              <div className="tag">APPLE · TITAN</div>
-              <div className="name">Project Titan</div>
-              <div className="big">~$10B</div>
-              <div className="big-cap">spent before cancellation</div>
-              <div className="mini-rule" />
-              <div className="fate">Cancelled · February 2024</div>
-              <div className="detail">Inside a hardware-margin business for a decade. ~2,000 employees reassigned to AI. Never shipped a vehicle.</div>
-            </div>
+          <div className="tomb">
+            <div className="tag">APPLE · TITAN</div>
+            <div className="name">Project Titan</div>
+            <div className="big">~$10B</div>
+            <div className="big-cap">spent before cancellation</div>
+            <div className="mini-rule" />
+            <div className="fate">Cancelled · February 2024</div>
+            <div className="detail">A decade inside a hardware-margin business. ~2,000 employees were reassigned to AI. The program never shipped a vehicle.</div>
           </div>
         </div>
       </div>
-      <div className="u-source">Sources: NPR Dec 11 2024 · TechCrunch Feb 27 2024</div>
+      <div className="u-source">Sources: NPR · Dec 11 2024 · TechCrunch · Feb 27 2024</div>
     </>
   );
 }
