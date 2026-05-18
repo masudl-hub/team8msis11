@@ -1193,22 +1193,28 @@ html, body {
 
 /* ============ 2026 v2 · Pichai-advisory deck ============ */
 
-/* Slide 3 · 2014 motivations — 5 stacked bullets */
+/* Slide 3 · 2014 motivations — spine + 5 stacked rows */
+.s-u .moti-wrap { display: grid; grid-template-columns: 72px 1fr; gap: 32px; height: 100%; }
+.s-u .moti-spine {
+  position: relative; border-left: 3px solid var(--g-blue);
+  display: flex; align-items: center; justify-content: flex-start; padding-left: 18px;
+}
+.s-u .moti-spine span {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
+  letter-spacing: 0.36em; color: var(--g-blue); text-transform: uppercase;
+}
 .s-u .moti-list { border-top: 1.5px solid var(--ink); }
 .s-u .moti-list .row {
   display: grid; grid-template-columns: 80px 360px 1fr; gap: 28px;
   align-items: center; padding: 30px 0; border-bottom: 1px solid var(--rule);
 }
 .s-u .moti-list .row .n {
-  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--g-blue);
+  font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700; color: var(--g-blue);
 }
-.s-u .moti-list .row .t { font-size: 30px; font-weight: 700; letter-spacing: -0.015em; }
-.s-u .moti-list .row .d { font-size: 20px; color: var(--mute); line-height: 1.4; }
-.s-u .moti-foot {
-  margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--rule);
-  font-size: 20px; color: var(--ink); font-style: italic; line-height: 1.45;
-}
-.s-u .moti-foot strong { color: var(--g-blue); font-style: normal; font-weight: 700; }
+.s-u .moti-list .row .t { font-size: 32px; font-weight: 700; letter-spacing: -0.015em; }
+.s-u .moti-list .row .d { font-size: 22px; color: var(--mute); line-height: 1.4; }
+
 
 /* Slide 5 · Why operator wins — 2x3 grid */
 .s-u .reasons {
