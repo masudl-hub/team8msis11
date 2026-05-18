@@ -1585,6 +1585,11 @@ html, body {
    Slide 6 (rebuilt) · Stage scoreboard — no overlapping cards
    =========================================================== */
 .s-u .stage-board { display: flex; flex-direction: column; gap: 36px; height: 100%; }
+.s-u .stage-board .sb-axis-label {
+  align-self: flex-end;
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
+  letter-spacing: 0.26em; color: var(--g-blue); margin-bottom: -16px;
+}
 .s-u .stage-board .sb-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; flex: 1;
 }
@@ -1631,16 +1636,16 @@ html, body {
    =========================================================== */
 .s-u .hub-wrap { display: flex; flex-direction: column; height: 100%; gap: 24px; }
 .s-u .hub-grid {
-  display: grid; grid-template-columns: 1fr 360px 1fr; gap: 0;
+  display: grid; grid-template-columns: minmax(0, 1fr) 340px minmax(0, 1fr); gap: 42px;
   align-items: center; flex: 1;
 }
-.s-u .hub-col { display: flex; flex-direction: column; gap: 22px; }
+.s-u .hub-col { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
 .s-u .hub-card {
   position: relative; background: var(--paper); border: 2px solid var(--ink);
   padding: 18px 22px; display: flex; flex-direction: column; gap: 4px;
 }
-.s-u .hub-card.right-align { text-align: right; margin-right: 60px; }
-.s-u .hub-card.left-align { text-align: left; margin-left: 60px; }
+.s-u .hub-card.right-align { text-align: right; margin-right: 0; }
+.s-u .hub-card.left-align { text-align: left; margin-left: 0; }
 .s-u .hub-card .hc-tag {
   font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
   letter-spacing: 0.28em; color: var(--g-blue);
@@ -1648,17 +1653,18 @@ html, body {
 .s-u .hub-card .hc-nm { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
 .s-u .hub-card .hc-d { font-size: 20px; color: var(--ink-2); line-height: 1.4; }
 .s-u .hub-card .hc-spoke {
-  position: absolute; top: 50%; right: -60px; width: 60px; height: 2px;
+  position: absolute; top: 50%; right: -42px; width: 42px; height: 2px;
   background: var(--g-blue); transform: translateY(-50%);
 }
-.s-u .hub-card .hc-spoke.left { left: -60px; right: auto; }
+.s-u .hub-card .hc-spoke.left { left: -42px; right: auto; }
 .s-u .hub-center { display: flex; justify-content: center; align-items: center; }
 .s-u .hub-core {
-  width: 320px; height: 320px; border-radius: 50%;
+  position: relative; transform: none;
+  width: 292px; height: 292px; border-radius: 50%;
   background: var(--g-blue); color: #fff;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; padding: 24px;
-  box-shadow: 0 0 0 14px rgba(26,115,232,0.12);
+  box-shadow: 0 0 0 10px rgba(26,115,232,0.12);
 }
 .s-u .hub-core .hc-core-tag {
   font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
