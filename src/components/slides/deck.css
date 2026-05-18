@@ -960,7 +960,7 @@ html, body {
 .s-u .two-col .col .rule { width: 56px; height: 2px; background: var(--mute); margin-bottom: 28px; }
 .s-u .two-col .col.right .rule { background: var(--g-blue); }
 .s-u .two-col .col p { font-size: 26px; line-height: 1.45; color: var(--ink); margin-bottom: 36px; }
-.s-u .two-col .col .note { font-size: 18px; color: var(--mute); font-style: italic; }
+.s-u .two-col .col .note { font-size: 22px; color: var(--mute); font-style: italic; }
 .s-u .two-col .col.right .note { color: var(--g-blue); }
 .s-u .two-col .divider { background: var(--rule); position: relative; }
 .s-u .two-col .divider .flow-arrow {
