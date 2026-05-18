@@ -9,7 +9,7 @@ const C = [
 export function Slide09() {
   return (
     <>
-      <div className="r-eyebrow">RECOMMENDATION TO PICHAI</div>
+      <div className="r-eyebrow">09 · RECOMMENDATION TO PICHAI</div>
       <div className="r-rule" />
       <div className="r-components">
         {C.map((c) => (
