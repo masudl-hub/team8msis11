@@ -1284,25 +1284,60 @@ html, body {
   letter-spacing: 0.15em; color: var(--mute-2); margin-top: 6px; text-transform: uppercase;
 }
 
-/* Slide 8 · 6-tile portfolio */
-.s-u .portfolio {
-  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr;
-  gap: 24px; height: calc(100% - 130px);
+/* Slide 8 · Ecosystem constellation */
+.s-u .ecosystem {
+  position: relative; width: 100%; height: 100%; margin-bottom: 20px;
 }
-.s-u .p-tile {
-  border: 1.5px solid var(--rule); padding: 30px 28px;
-  display: flex; flex-direction: column; justify-content: space-between;
+.s-u .eco-mesh {
+  position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;
 }
-.s-u .p-tile.av { border-color: var(--g-blue); border-width: 2.5px; background: var(--paper-2); }
-.s-u .p-tile .ptag {
-  font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 700;
-  letter-spacing: 0.3em; color: var(--mute); margin-bottom: 14px;
+.s-u .eco-mesh path {
+  stroke: #94a3b8; stroke-width: 2px; stroke-dasharray: 6 4;
 }
-.s-u .p-tile.av .ptag { color: var(--g-blue); }
-.s-u .p-tile .pname { font-size: 44px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 14px; }
-.s-u .p-tile .pdesc { font-size: 18px; color: var(--mute); line-height: 1.45; }
+.s-u .eco-node {
+  position: absolute; transform: translate(-50%, -50%); z-index: 1;
+}
+.s-u .eco-ring {
+  width: 110px; height: 110px; border-radius: 50%;
+  border: 2.5px solid #d0d5dd; background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.s-u .eco-ring img { width: 100%; height: 100%; object-fit: contain; }
+.s-u .eco-hub .eco-ring {
+  width: 150px; height: 150px; border: 3.5px solid var(--g-blue);
+  box-shadow: 0 0 0 12px rgba(66,133,244,0.10), 0 0 0 28px rgba(66,133,244,0.04), 0 4px 20px rgba(0,0,0,0.08);
+  padding: 30px;
+}
+.s-u .eco-text {
+  position: absolute; width: 280px; display: flex; flex-direction: column; gap: 3px;
+  background: rgb(250, 250, 247); padding: 6px 10px; border-radius: 6px;
+}
+.s-u .eco-text--right {
+  left: calc(100% + 16px); top: 50%; transform: translateY(-50%);
+}
+.s-u .eco-text--left {
+  right: calc(100% + 16px); top: 50%; transform: translateY(-50%); text-align: right;
+}
+.s-u .eco-text--below {
+  left: 50%; top: calc(100% + 14px); transform: translateX(-50%); text-align: center;
+}
+.s-u .eco-hub .eco-text { width: 280px; }
+.s-u .eco-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
+  letter-spacing: 0.2em; color: var(--mute); white-space: nowrap;
+}
+.s-u .eco-hub .eco-tag { color: var(--g-blue); font-size: 17px; }
+.s-u .eco-name {
+  font-size: 26px; font-weight: 700; color: var(--ink);
+}
+.s-u .eco-hub .eco-name { font-size: 30px; }
+.s-u .eco-desc {
+  font-size: 20px; color: var(--mute); line-height: 1.4;
+}
 .s-u .portfolio-cap {
-  position: absolute; bottom: 110px; left: 96px; right: 96px;
+  position: absolute; bottom: 24px; left: 96px; right: 96px;
   font-size: 22px; color: var(--ink); line-height: 1.5; font-style: italic;
   padding-top: 18px; border-top: 1px solid var(--rule);
 }
