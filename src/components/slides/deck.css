@@ -1580,3 +1580,104 @@ html, body {
 .s-u .ladder-row .lr-arrow { font-size: 30px; color: var(--g-blue); text-align: center; }
 .s-u .ladder-row .lr-m { font-size: 22px; color: var(--ink-2); line-height: 1.45; }
 .s-u .ladder-row.win .lr-m { color: var(--g-blue); font-weight: 600; }
+
+/* ===========================================================
+   Slide 6 (rebuilt) · Stage scoreboard — no overlapping cards
+   =========================================================== */
+.s-u .stage-board { display: flex; flex-direction: column; gap: 36px; height: 100%; }
+.s-u .stage-board .sb-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; flex: 1;
+}
+.s-u .stage-board .sb-col {
+  display: flex; flex-direction: column; gap: 16px;
+  border-top: 3px solid var(--ink); padding-top: 18px;
+}
+.s-u .stage-board .sb-col.lead { border-top-color: var(--g-blue); }
+.s-u .stage-board .sb-stage {
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--ink);
+}
+.s-u .stage-board .sb-col.lead .sb-stage { color: var(--g-blue); }
+.s-u .stage-board .sb-card {
+  background: var(--paper-2); border: 1.5px solid var(--rule);
+  padding: 22px 22px; display: flex; flex-direction: column; gap: 8px;
+}
+.s-u .stage-board .sb-card.lead {
+  background: #EAF2FE; border: 2.5px solid var(--g-blue);
+}
+.s-u .stage-board .sb-role {
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--ink-2);
+}
+.s-u .stage-board .sb-card.lead .sb-role,
+.s-u .stage-board .sb-off-card .sb-role { color: var(--g-blue); }
+.s-u .stage-board .sb-nm { font-size: 30px; font-weight: 700; letter-spacing: -0.01em; }
+.s-u .stage-board .sb-sig { font-size: 22px; color: var(--ink-2); line-height: 1.4; }
+.s-u .stage-board .sb-off {
+  display: grid; grid-template-columns: 280px 1fr; gap: 28px; align-items: center;
+  border-top: 1px dashed var(--rule-strong); padding-top: 22px;
+}
+.s-u .stage-board .sb-off-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--ink);
+}
+.s-u .stage-board .sb-off-card {
+  background: var(--paper); border: 1.5px solid var(--rule); padding: 18px 22px;
+  display: grid; grid-template-columns: 180px 220px 1fr; gap: 24px; align-items: baseline;
+}
+
+/* ===========================================================
+   Slide 8 (rebuilt) · Hub-and-spokes grid — no SVG drift
+   =========================================================== */
+.s-u .hub-wrap { display: flex; flex-direction: column; height: 100%; gap: 24px; }
+.s-u .hub-grid {
+  display: grid; grid-template-columns: 1fr 360px 1fr; gap: 0;
+  align-items: center; flex: 1;
+}
+.s-u .hub-col { display: flex; flex-direction: column; gap: 22px; }
+.s-u .hub-card {
+  position: relative; background: var(--paper); border: 2px solid var(--ink);
+  padding: 18px 22px; display: flex; flex-direction: column; gap: 4px;
+}
+.s-u .hub-card.right-align { text-align: right; margin-right: 60px; }
+.s-u .hub-card.left-align { text-align: left; margin-left: 60px; }
+.s-u .hub-card .hc-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--g-blue);
+}
+.s-u .hub-card .hc-nm { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+.s-u .hub-card .hc-d { font-size: 20px; color: var(--ink-2); line-height: 1.4; }
+.s-u .hub-card .hc-spoke {
+  position: absolute; top: 50%; right: -60px; width: 60px; height: 2px;
+  background: var(--g-blue); transform: translateY(-50%);
+}
+.s-u .hub-card .hc-spoke.left { left: -60px; right: auto; }
+.s-u .hub-center { display: flex; justify-content: center; align-items: center; }
+.s-u .hub-core {
+  width: 320px; height: 320px; border-radius: 50%;
+  background: var(--g-blue); color: #fff;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 24px;
+  box-shadow: 0 0 0 14px rgba(26,115,232,0.12);
+}
+.s-u .hub-core .hc-core-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700;
+  letter-spacing: 0.32em; margin-bottom: 14px;
+}
+.s-u .hub-core .hc-core-stat { font-size: 84px; font-weight: 800; line-height: 1; }
+.s-u .hub-core .hc-core-cap { font-size: 22px; opacity: 0.92; margin-top: 6px; }
+
+.s-u .hub-foot { border-top: 2px solid var(--ink); padding-top: 18px; }
+.s-u .hub-foot .hf-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
+  letter-spacing: 0.28em; color: var(--ink-2); margin-bottom: 12px;
+}
+.s-u .hub-foot .hf-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.s-u .hub-foot .hf-item { font-size: 22px; color: var(--ink-2); line-height: 1.4; }
+.s-u .hub-foot .hf-item strong { color: var(--ink); font-weight: 700; }
+
+/* ===========================================================
+   Global legibility floor: bump remaining small/low-contrast text
+   =========================================================== */
+.s-u .u-eyebrow { font-size: 22px; }
+.s-u .u-source { font-size: 22px; color: var(--ink-2); }
