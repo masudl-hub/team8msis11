@@ -1330,7 +1330,7 @@ html, body {
 /* ===========================================================
    Slide 4 · Monetization 2×2 matrix
    =========================================================== */
-.s-u .matrix { position: relative; width: 100%; height: 100%; padding: 36px 60px 36px 90px; }
+.s-u .matrix { position: relative; width: 100%; height: 100%; padding: 56px 60px 56px 110px; }
 .s-u .matrix .m-grid {
   position: relative; width: 100%; height: 100%;
   display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
@@ -1344,44 +1344,44 @@ html, body {
 .s-u .matrix .m-cell.win { border: 2.5px solid var(--g-blue); background: #EAF2FE; }
 .s-u .matrix .m-cell .mc-head { display: flex; align-items: baseline; gap: 14px; }
 .s-u .matrix .m-cell .mc-k {
-  font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 800;
-  color: var(--mute); line-height: 1;
+  font-family: 'JetBrains Mono', monospace; font-size: 36px; font-weight: 800;
+  color: var(--ink-2); line-height: 1;
 }
 .s-u .matrix .m-cell.win .mc-k { color: var(--g-blue); }
-.s-u .matrix .m-cell .mc-nm { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
-.s-u .matrix .m-cell .mc-play { font-size: 22px; line-height: 1.4; color: var(--ink-2); }
+.s-u .matrix .m-cell .mc-nm { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
+.s-u .matrix .m-cell .mc-play { font-size: 24px; line-height: 1.4; color: var(--ink-2); }
 .s-u .matrix .m-cell .mc-verdict {
-  font-size: 22px; line-height: 1.4; color: var(--ink); font-weight: 600;
-  padding-top: 10px; border-top: 1px solid var(--rule); margin-top: auto;
+  font-size: 24px; line-height: 1.4; color: var(--ink); font-weight: 600;
+  padding-top: 12px; border-top: 1px solid var(--rule); margin-top: auto;
 }
 .s-u .matrix .m-cell.win .mc-verdict { color: var(--g-blue); }
-/* axes */
+/* Y axis: HIGH (top) · vertical label · LOW (bottom) — all stacked, no overlap */
 .s-u .matrix .m-axis.y {
-  position: absolute; left: 0; top: 36px; bottom: 36px; width: 56px;
+  position: absolute; left: 0; top: 56px; bottom: 56px; width: 92px;
   display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  padding: 4px 0;
 }
 .s-u .matrix .m-axis.y .lbl {
   writing-mode: vertical-rl; transform: rotate(180deg);
-  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.36em;
-  color: var(--ink-2); font-weight: 700;
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: 0.36em;
+  color: var(--ink); font-weight: 700;
 }
 .s-u .matrix .m-axis.y .hi, .s-u .matrix .m-axis.y .lo {
-  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.28em;
-  color: var(--ink-2); font-weight: 700; position: absolute; right: 0;
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: 0.28em;
+  color: var(--ink); font-weight: 700;
 }
-.s-u .matrix .m-axis.y .hi { top: 0; }
-.s-u .matrix .m-axis.y .lo { bottom: 0; }
+/* X axis: LOW · label · HIGH — single flex row, no overlap */
 .s-u .matrix .m-axis.x {
-  position: absolute; left: 90px; right: 60px; bottom: 0; height: 30px;
+  position: absolute; left: 110px; right: 60px; bottom: 14px; height: 28px;
   display: flex; align-items: center; justify-content: space-between;
 }
 .s-u .matrix .m-axis.x .lbl {
-  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.36em;
-  color: var(--ink-2); font-weight: 700; position: absolute; left: 50%; transform: translateX(-50%);
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: 0.36em;
+  color: var(--ink); font-weight: 700;
 }
 .s-u .matrix .m-axis.x .lo, .s-u .matrix .m-axis.x .hi {
-  font-family: 'JetBrains Mono', monospace; font-size: 18px; letter-spacing: 0.28em;
-  color: var(--ink-2); font-weight: 700;
+  font-family: 'JetBrains Mono', monospace; font-size: 20px; letter-spacing: 0.28em;
+  color: var(--ink); font-weight: 700;
 }
 
 /* ===========================================================
