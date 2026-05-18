@@ -889,8 +889,8 @@ html, body {
   line-height: 1.08; color: var(--ink);
 }
 .s-u .u-title.with-video { right: 540px; }
-.s-u .u-sub.with-video   { top: 320px; right: 540px; }
-.s-u .u-body.with-video  { top: 400px; }
+.s-u .u-sub.with-video   { top: 290px; right: 540px; }
+.s-u .u-body.with-video  { top: 380px; }
 
 .s-u .presenter-video {
   position: absolute; top: 72px; right: 96px;
