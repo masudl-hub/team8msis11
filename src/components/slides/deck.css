@@ -1389,19 +1389,56 @@ html, body {
    =========================================================== */
 .s-u .hex {
   display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr;
-  gap: 22px; height: 100%;
+  gap: 24px; height: 100%;
 }
 .s-u .hex-cell {
-  border: 1.5px solid var(--rule); padding: 24px 24px; background: var(--paper);
-  display: flex; flex-direction: column; gap: 12px;
+  position: relative; overflow: hidden;
+  border: 1.5px solid var(--rule); border-top: none;
+  padding: 28px 28px 24px; background: var(--paper);
+  display: flex; flex-direction: column; gap: 10px;
+  transition: transform .2s ease;
 }
-.s-u .hex-cell.win { border: 2.5px solid var(--g-blue); background: #EAF2FE; }
+.s-u .hex-cell::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+  background: var(--cell-accent, var(--g-blue));
+}
+.s-u .hex-cell.accent-blue   { --cell-accent: var(--g-blue);   --cell-tint: #EAF2FE; }
+.s-u .hex-cell.accent-green  { --cell-accent: var(--g-green);  --cell-tint: #E8F5EC; }
+.s-u .hex-cell.accent-yellow { --cell-accent: var(--g-yellow); --cell-tint: #FDF3DC; }
+.s-u .hex-cell.accent-red    { --cell-accent: var(--g-red);    --cell-tint: #FBE9E7; }
+.s-u .hex-cell .hc-ghost {
+  position: absolute; right: 18px; bottom: -22px;
+  font-family: 'JetBrains Mono', monospace; font-size: 150px; font-weight: 800;
+  color: var(--cell-accent); opacity: 0.07; line-height: 1; letter-spacing: -0.04em;
+  pointer-events: none;
+}
+.s-u .hex-cell .hc-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
 .s-u .hex-cell .hc-n {
   font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700;
-  color: var(--g-blue); letter-spacing: 0.3em;
+  color: var(--cell-accent); letter-spacing: 0.28em;
 }
-.s-u .hex-cell .hc-t { font-size: 28px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.15; }
-.s-u .hex-cell .hc-d { font-size: 20px; color: var(--ink-2); line-height: 1.4; }
+.s-u .hex-cell .hc-tag {
+  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
+  color: var(--ink); background: var(--cell-tint);
+  padding: 4px 10px; letter-spacing: 0.2em; border-radius: 2px;
+}
+.s-u .hex-cell .hc-t {
+  font-size: 30px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.15;
+  color: var(--ink);
+}
+.s-u .hex-cell .hc-d {
+  font-size: 20px; color: var(--ink-2); line-height: 1.45;
+}
+.s-u .hex-cell .hc-check {
+  margin-top: auto; padding-top: 14px;
+  display: flex; align-items: center; gap: 8px;
+  color: var(--cell-accent);
+  font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700;
+  letter-spacing: 0.22em;
+  border-top: 1px solid var(--rule);
+}
 
 /* ===========================================================
    Slide 6 · Deployment maturity axis
