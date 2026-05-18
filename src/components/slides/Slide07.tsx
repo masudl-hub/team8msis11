@@ -1,4 +1,4 @@
-import { Eyebrow, Sub } from "./_u";
+import { Eyebrow } from "./_u";
 import { PresenterVideo } from "./PresenterVideo";
 
 export const slideClass = "s-u";
@@ -8,9 +8,9 @@ export function Slide07() {
     <>
       <Eyebrow>07 · NOTABLE ABSENCES</Eyebrow>
       <h2 className="u-title with-video">$20B in rival spending proves integration kills AV programs.</h2>
-      <Sub>Cruise and Titan — gone exactly the way Bower &amp; Christensen 1995 predicted.</Sub>
+      <p className="u-sub with-video">Cruise and Titan — gone exactly the way Bower &amp; Christensen 1995 predicted.</p>
       <PresenterVideo src="/slide7-presenter.mp4" />
-      <div className="u-body">
+      <div className="u-body with-video">
         <div className="neg-split">
           <div className="col">
             <div className="tag">GM · CRUISE</div>
