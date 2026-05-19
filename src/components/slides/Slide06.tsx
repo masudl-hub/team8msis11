@@ -29,7 +29,7 @@ export function Slide06() {
             <div className="ls-tag">LEADER</div>
             <div className="ls-rule" />
             <div className="ls-big">500K</div>
-            <div className="ls-big-cap">RIDES PER WEEK · 10 CITIES</div>
+            <div className="ls-big-cap">RIDES PER WEEK · 11 CITIES</div>
             <div className="ls-safety">92% fewer serious-injury crashes</div>
           </div>
           <div className="ls-grid">
