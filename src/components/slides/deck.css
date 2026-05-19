@@ -1362,17 +1362,23 @@ html, body {
 }
 .s-u.recommend .r-comp .rt em { font-style: normal; color: var(--g-blue); font-weight: 700; }
 
-/* Slide 10 · Mission mechanisms (3 rows, like .rows but headline-led) */
-.s-u .mech-list { border-top: 1.5px solid var(--ink); }
-.s-u .mech {
-  display: grid; grid-template-columns: 100px 1fr; gap: 32px;
-  align-items: baseline; padding: 40px 0; border-bottom: 1px solid var(--rule);
+/* Slide 10 · Mission mechanisms (3 illustrated columns) */
+.s-u .mech-cols {
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px;
 }
-.s-u .mech .mn {
-  font-family: 'JetBrains Mono', monospace; font-size: 25px; font-weight: 700; color: var(--g-blue);
+.s-u .mech-col {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
 }
-.s-u .mech .mb .mt { font-size: 39px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 10px; }
-.s-u .mech .mb .md { font-size: 23px; color: var(--mute); line-height: 1.45; }
+.s-u .mech-svg { width: 280px; height: auto; margin-bottom: 32px; }
+.s-u .mech-col .mn {
+  font-family: 'JetBrains Mono', monospace; font-size: 24px; font-weight: 700;
+  color: var(--g-blue); margin-bottom: 10px;
+}
+.s-u .mech-col .mt {
+  font-size: 36px; font-weight: 700; letter-spacing: -0.02em;
+  margin-bottom: 14px; line-height: 1.2;
+}
+.s-u .mech-col .md { font-size: 22px; color: var(--mute); line-height: 1.5; }
 
 /* Slide 11 · risk + mitigation 2-col rows */
 .s-u .risk2 { border-top: 1.5px solid var(--ink); }
