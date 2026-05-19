@@ -23,7 +23,7 @@ export function PresenterVideo({ src, className }: Props) {
         key={url ?? src}
         src={url ?? src}
         autoPlay
-        muted
+        controls
         loop
         playsInline
         preload="auto"
